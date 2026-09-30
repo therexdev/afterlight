@@ -11,3 +11,4 @@ contracts/build/*.wasm.map
 contracts/build/*.js
 contracts/build/*.d.ts
 artwork-originals/
+Afterlight-*-Website.zip

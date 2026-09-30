@@ -1,6 +1,7 @@
 import {writeFileSync} from 'node:fs';
 const R=true,W=false;
 export const archiveMethods={
+ get_contract_info:[[['bytes','account',1]],[['bool','exists',1],['bytes','code_hash',2],['bool','authorizes_upload_contract',3],['bool','authorizes_call_contract',4],['bool','authorizes_transaction_application',5]],R],
  get_status:[[],[['uint32','minted',1],['bool','sealed',2],['uint32','supply_cap',3],['uint32','chunk_bytes',4],['uint32','max_artifact_bytes',5]],R],
  get_artifact:[[['uint32','artifact_id',1]],[['artifact','value',1]],R],
  get_chunk:[[['uint32','artifact_id',1],['uint32','index',2]],[['bytes','value',1]],R],
@@ -52,7 +53,7 @@ const fields=fs=>fs.map(([t,n,i])=>'  '+t+' '+n+' = '+i+';').join('\n');
 for(const[n,[a,r,ro]]of Object.entries(methods))s+='\n// @read-only '+ro+'\nmessage '+n+'_arguments {\n'+fields(a)+'\n}\nmessage '+n+'_result {\n'+fields(r)+'\n}\n';
 s=s.replace(/bytes (to|from|owner|approved|operator|approver_address|operator_address|account|address|archive|treasury|payment_token|seller|buyer|expected_seller)\s*=\s*(\d+);/g,'bytes $1 = $2 [(koinos.btype) = ADDRESS];')
 .replace(/bytes token_id\s*=\s*(\d+);/g,'bytes token_id = $1 [(koinos.btype) = HEX];')
-.replace(/bytes sha256\s*=\s*(\d+);/g,'bytes sha256 = $1 [(koinos.btype) = HEX];');
+.replace(/bytes (sha256|code_hash)\s*=\s*(\d+);/g,'bytes $1 = $2 [(koinos.btype) = HEX];');
 for(const n of ['owner','owner_of','get_approved'])s=s.replace('message '+n+'_result {\n  bytes value = 1;','message '+n+'_result {\n  bytes value = 1 [(koinos.btype) = ADDRESS];');
 writeFileSync('contracts/assembly/proto/afterlight.proto',s);
 }

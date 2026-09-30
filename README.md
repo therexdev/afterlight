@@ -13,7 +13,7 @@ A 100-work art collection for Koinos, with images and stories stored on-chain, i
 - An immutable artwork archive and a separate upgradeable collection/marketplace contract, with corrected generated ABIs.
 - Initial listings at 500 KOIN; owner-priced resales, cancellation, transfer, and atomic KOIN payment. No added marketplace fee or resale royalty.
 - Resumable upload tooling, pre-broadcast resource simulation, complete on-chain readback verification, and a separate command to open sales.
-- 52 passing compiled-contract tests and 24 passing Node tests. GitHub Actions repeats the build and checks.
+- 54 passing compiled-contract tests and 28 passing Node tests. GitHub Actions repeats the build and checks.
 
 ## Run locally
 
@@ -35,6 +35,8 @@ npm run launch:plan
 ```
 
 The protobuf compiler is pinned to version 36.2. Its first build downloads that release from the official Protocol Buffers repository, so a fresh installation needs network access. Application packages are locked in `package-lock.json`.
+
+For Windows testnet deployment using an already funded wallet, follow [the step-by-step Windows guide](docs/TESTNET-WINDOWS.md). The setup uses a hidden local key prompt and checks the funded address before creating any launch files.
 
 ## Launch when ready
 

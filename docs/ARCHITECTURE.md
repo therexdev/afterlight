@@ -6,7 +6,7 @@ The collection consists of 100 distinct AI-generated sculptural artworks. Each h
 
 `Archive.ts` stores 100 image records and a self-contained HTML recovery reader as record 101. Images are uploaded in 16 KiB chunks. The declaration commits the exact name, MIME type, length, SHA-256, and metadata. Finalization reconstructs the complete file and checks its digest. Finalized records cannot be modified. Sealing requires all 101 records and ends all uploads.
 
-The archive deployment sets `authorizes_upload_contract=true`, with its `authorize` implementation returning false. Its upload authority cannot subsequently replace the contract. The other authority override flags remain false so the archive account can sign initial content uploads normally. The deployment verifier checks the flags in the confirmed deployment operation.
+The archive deployment sets `authorizes_upload_contract=true`, with its `authorize` implementation returning false. Its upload authority cannot subsequently replace the contract. The other authority override flags remain false so the archive account can sign initial content uploads normally. The deployment verifier checks the flags in the confirmed deployment operation and the current contract metadata. The read-only `get_contract_info` method exposes code hashes and authority flags for nodes whose RPC does not support system-call invocation; it does not change archive state.
 
 ## Collection and marketplace
 

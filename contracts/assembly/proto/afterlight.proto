@@ -19,6 +19,18 @@ message sale_event { bytes token_id = 1 [(koinos.btype) = HEX]; bytes seller = 2
 message listing_event { bytes token_id = 1 [(koinos.btype) = HEX]; listing sale=2; }
 
 // @read-only true
+message get_contract_info_arguments {
+  bytes account = 1 [(koinos.btype) = ADDRESS];
+}
+message get_contract_info_result {
+  bool exists = 1;
+  bytes code_hash = 2 [(koinos.btype) = HEX];
+  bool authorizes_upload_contract = 3;
+  bool authorizes_call_contract = 4;
+  bool authorizes_transaction_application = 5;
+}
+
+// @read-only true
 message get_status_arguments {
 
 }

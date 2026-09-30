@@ -5,8 +5,8 @@ Local validation completed on 2026-09-30. This repository remains a prelaunch bu
 | Check | Result |
 | --- | --- |
 | Full contract, collection and website build | Passed |
-| Compiled AssemblyScript contract tests in Koinos MockVM | 52 / 52 passed |
-| Node tests: reader, ABI, amounts, launch preparation, transaction intent | 24 / 24 passed |
+| Compiled AssemblyScript contract tests in Koinos MockVM | 54 / 54 passed |
+| Node tests: reader, ABI, amounts, launch preparation, transaction intent | 28 / 28 passed |
 | Unique final artworks | 100 images / 100 distinct hashes |
 | Largest final image | 196,036 bytes, below the 200,000-byte limit |
 | Total final image data | 13,763,010 bytes |
@@ -24,3 +24,5 @@ Browser review covered the full 100-work catalog, search, artwork detail, prelau
 No funded public testnet rehearsal of these new contracts has been performed. Real Kondor signing, live KOIN payments, upload resource requirements, and mainnet deployment remain unverified on a public chain. Complete the funded testnet steps in `LAUNCH.md` before opening mainnet sales. The preserved earlier testnet experiment is a different contract and is not evidence that this new release was deployed.
 
 These checks are local engineering validation, not an independent security audit.
+
+The funded-wallet setup was also checked against the Foundation testnet RPC on 2026-09-30 UTC. Native token resolution through its name-service contract, token balance, and account Mana reads succeeded. The legacy-node path verifies deployed code hashes and authority flags using the archive’s read-only `get_contract_info` method, because that node does not expose `chain.invoke_system_call`. No signing key from the funded wallet was accessed and no deployment was broadcast.

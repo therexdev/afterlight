@@ -4,6 +4,8 @@ Nothing in this repository has been deployed to mainnet. The checked-in website 
 
 Use Linux, macOS, or WSL on Windows, with Node.js 22 or later. The contract compiler uses a small POSIX `protoc` wrapper. The final website itself is plain HTML/CSS/JavaScript and can be hosted on any static web host.
 
+For a ready-to-deploy Windows testnet package, use [TESTNET-WINDOWS.md](TESTNET-WINDOWS.md). It uses the included compiled contracts and does not require WSL.
+
 ## Build the exact release
 
 ```sh

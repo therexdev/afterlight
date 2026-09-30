@@ -62,7 +62,7 @@ export class ChainClient {
     return sale;
   }
   async send(owner, method, args, progress = () => {}) {
-    if (!this.config.enabled || !this.collection) throw Error('Mainnet sales have not opened.');
+    if (!this.config.enabled || !this.collection) throw Error('Sales have not opened on this network.');
     if (!['buy','list_token','cancel_listing','transfer'].includes(method)) throw Error('Unsupported transaction.');
     address(owner); await this.network();
     if (localStorage.getItem('afterlight.pending.' + this.config.chainId)) throw Error('An earlier transaction needs confirmation before another can be submitted.');

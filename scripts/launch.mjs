@@ -3,6 +3,7 @@ import {randomBytes} from 'node:crypto';
 import {readFileSync,writeFileSync,existsSync,mkdirSync,unlinkSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {makeProvider} from './provider.mjs';
+import {resolveNativeKoin,deploymentMetadata,TESTNET_KOIN} from './chain-compat.mjs';
 import {MAINNET,TESTNET,sha256,atomicJSON,assertNetwork,loadArtifacts,compareArtifact,declaration,quoteLimit,readJournal} from './launch-lib.mjs';
 const command=process.argv[2]||'plan';
 const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};
@@ -16,12 +17,13 @@ if(command==='prepare'){
  const network=arg('network');if(!['mainnet','testnet'].includes(network))throw Error('Choose --network mainnet or --network testnet.');
  const main=network==='mainnet';
  const funding=process.env.AFTERLIGHT_FUNDING_WIF?Signer.fromWif(process.env.AFTERLIGHT_FUNDING_WIF):new Signer({privateKey:randomBytes(32)});
+ if(arg('funding-address')&&funding.address!==validateAddress(arg('funding-address')))throw Error('The imported key does not match the requested funded wallet. No launch files were created.');
  const archive=new Signer({privateKey:randomBytes(32)}),collection=new Signer({privateKey:randomBytes(32)});
  const treasury=validateAddress(arg('treasury')||funding.address);
  mkdirSync('.secrets',{recursive:true,mode:0o700});
  const secrets={network,chainId:main?MAINNET:TESTNET,funding:{address:funding.address,wif:funding.getPrivateKey('wif')},archive:{address:archive.address,wif:archive.getPrivateKey('wif')},collection:{address:collection.address,wif:collection.getPrivateKey('wif')}};
  writeFileSync(walletPath,JSON.stringify(secrets,null,2)+'\n',{flag:'wx',mode:0o600});
- const cfg={...json(configPath),networkLabel:main?'Koinos mainnet':'Koinos Foundation Testnet',chainId:secrets.chainId,rpcUrls:[arg('rpc')||(main?'https://api.koinos.io':'https://testnet.koinosfoundation.org/jsonrpc')],archiveId:archive.address,collectionId:collection.address,treasury,enabled:false};
+ const cfg={...json(configPath),networkLabel:main?'Koinos mainnet':'Koinos Foundation Testnet',currencySymbol:main?'KOIN':'tKOIN',chainId:secrets.chainId,rpcUrls:[arg('rpc')||(main?'https://api.koinos.io':'https://testnet.koinosfoundation.org/jsonrpc')],paymentToken:main?'19GYjDBVXU7keLbYvMLazsGQn3GTWHjHkK':TESTNET_KOIN,archiveId:archive.address,collectionId:collection.address,treasury,enabled:false};
  // The native KOIN address is resolved and verified by upload, before initialize is constructed.
  atomicJSON(configPath,cfg);atomicJSON(journalPath,{status:'prepared',chainId:cfg.chainId,archiveId:cfg.archiveId,collectionId:cfg.collectionId,fundingAddress:funding.address,transactions:[]});
  run('scripts/prepare-collection.mjs');run('scripts/build-utilities.mjs');
@@ -31,7 +33,7 @@ if(command==='prepare'){
 const cfg=json(configPath);
 if(command==='plan'){
  const artifacts=loadArtifacts();
- const plan={network:cfg.networkLabel,contractsPrepared:!!cfg.archiveId&&!!cfg.collectionId,artworks:100,archivedViewer:true,imageBytes:artifacts.filter(a=>a.id<=100).reduce((n,a)=>n+a.bytes,0),totalArchiveBytes:artifacts.reduce((n,a)=>n+a.bytes,0),uploadChunks:artifacts.reduce((n,a)=>n+Math.ceil(a.bytes/16384),0),initialPriceKoin:500,totalInitialListingsKoin:50000,archiveUpgradeable:false,collectionUpgradeable:true,mainnetBroadcast:false,next:cfg.archiveId?'Fund the payer printed by prepare:wallet. Upload remains a separate command.':'Run npm run prepare:wallet -- --network mainnet, then back up the generated local wallet file.'};
+ const plan={network:cfg.networkLabel,contractsPrepared:!!cfg.archiveId&&!!cfg.collectionId,artworks:100,archivedViewer:true,imageBytes:artifacts.filter(a=>a.id<=100).reduce((n,a)=>n+a.bytes,0),totalArchiveBytes:artifacts.reduce((n,a)=>n+a.bytes,0),uploadChunks:artifacts.reduce((n,a)=>n+Math.ceil(a.bytes/16384),0),initialPriceKoin:500,totalInitialListingsKoin:50000,archiveUpgradeable:false,collectionUpgradeable:true,mainnetBroadcast:false,next:cfg.archiveId?'Fund the payer printed by prepare:wallet. Upload remains a separate command.':'Run npm run prepare:wallet -- --network '+(cfg.chainId===MAINNET?'mainnet':'testnet')+', then back up the generated local wallet file.'};
  atomicJSON('collection/launch-plan.json',plan);console.log(JSON.stringify(plan,null,2));process.exit(0);
 }
 if(!['upload','verify','open'].includes(command))throw Error('Unknown launch command.');
@@ -82,7 +84,7 @@ async function write(contract,role,name,args={},label=name){return send(role,lab
 async function verifyUpload(role,contract,abi,immutable){
  const label='Deploy '+role;const prior=journal.transactions.find(t=>t.label===label);
  const bytes=readFileSync('contracts/build/'+(role==='archive'?'archive':'afterlight')+'.wasm');
- const current=(await p.invokeGetContractMetadata(contract.getId()))?.value;
+ const current=await deploymentMetadata(p,cfg.chainId,contract.getId(),archive,journal.transactions.some(t=>t.label==='Deploy archive'));
  if(prior){
   if(!current || current.hash?.replace(/^0x/,'')!=='1220'+sha256(bytes) || !!current.authorizes_upload_contract!==immutable || current.authorizes_call_contract || current.authorizes_transaction_application)throw Error('Current contract code or authority flags differ from the launch build.');
   const done=await confirm(prior.id);const op=done.transaction?.operations?.find(o=>o.upload_contract?.contract_id===contract.getId())?.upload_contract;
@@ -101,7 +103,7 @@ async function readback(art){
  return {id:art.id,sha256:art.sha256,bytes:art.bytes,verified:true};
 }
 if(command==='upload'){
- const resolved=await p.invokeGetContractAddress('koin');const payment=resolved.value?.address||resolved.address;
+ const payment=await resolveNativeKoin(p,cfg.chainId);
  validateAddress(payment);if(cfg.chainId===MAINNET&&payment!=='19GYjDBVXU7keLbYvMLazsGQn3GTWHjHkK')throw Error('Unexpected mainnet KOIN contract.');
  if(cfg.paymentToken!==payment){cfg.paymentToken=payment;atomicJSON(configPath,cfg);run('scripts/prepare-collection.mjs');run('scripts/build-utilities.mjs');}
  const artifacts=loadArtifacts();

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync,cpSync,symlinkSync,readFileSync,statSync,rmSync} from 'node:fs';
+import {mkdtempSync,cpSync,symlinkSync,readFileSync,statSync,rmSync,existsSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
@@ -13,6 +13,8 @@ test('offline wallet preparation binds all artifacts, protects keys, and refuses
     symlinkSync(join(root,'node_modules'),join(fixture,'node_modules'),'dir');
     const env={...process.env};delete env.AFTERLIGHT_FUNDING_WIF;
     const run=()=>spawnSync(process.execPath,['scripts/launch.mjs','prepare','--network','testnet'],{cwd:fixture,env,encoding:'utf8'});
+    const wrong=spawnSync(process.execPath,['scripts/launch.mjs','prepare','--network','testnet','--funding-address','1F8s7vYxRPpMKTmb8Meamsx2FV6uzrafag'],{cwd:fixture,env,encoding:'utf8'});
+    assert.notEqual(wrong.status,0);assert.match(wrong.stderr,/does not match/);assert.equal(existsSync(join(fixture,'.secrets')),false);
     const result=run();assert.equal(result.status,0,result.stderr);
     const secrets=JSON.parse(readFileSync(join(fixture,'.secrets/launch-wallets.json')));
     assert.equal(new Set(['funding','archive','collection'].map(role=>secrets[role].address)).size,3);

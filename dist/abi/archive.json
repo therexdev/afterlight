@@ -1,5 +1,11 @@
 {
   "methods": {
+    "get_contract_info": {
+      "argument": "afterlight.get_contract_info_arguments",
+      "return": "afterlight.get_contract_info_result",
+      "entry_point": 2272283858,
+      "read_only": true
+    },
     "get_status": {
       "argument": "afterlight.get_status_arguments",
       "return": "afterlight.get_status_result",
@@ -389,6 +395,44 @@
               "sale": {
                 "type": "listing",
                 "id": 2
+              }
+            }
+          },
+          "get_contract_info_arguments": {
+            "fields": {
+              "account": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "get_contract_info_result": {
+            "fields": {
+              "exists": {
+                "type": "bool",
+                "id": 1
+              },
+              "code_hash": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "authorizes_upload_contract": {
+                "type": "bool",
+                "id": 3
+              },
+              "authorizes_call_contract": {
+                "type": "bool",
+                "id": 4
+              },
+              "authorizes_transaction_application": {
+                "type": "bool",
+                "id": 5
               }
             }
           },

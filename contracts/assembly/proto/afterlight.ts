@@ -1054,6 +1054,129 @@ export namespace afterlight {
     }
   }
 
+  export class get_contract_info_arguments {
+    static encode(message: get_contract_info_arguments, writer: Writer): void {
+      const unique_name_account = message.account;
+      if (unique_name_account !== null) {
+        writer.uint32(10);
+        writer.bytes(unique_name_account);
+      }
+    }
+
+    static decode(reader: Reader, length: i32): get_contract_info_arguments {
+      const end: usize = length < 0 ? reader.end : reader.ptr + length;
+      const message = new get_contract_info_arguments();
+
+      while (reader.ptr < end) {
+        const tag = reader.uint32();
+        switch (tag >>> 3) {
+          case 1:
+            message.account = reader.bytes();
+            break;
+
+          default:
+            reader.skipType(tag & 7);
+            break;
+        }
+      }
+
+      return message;
+    }
+
+    account: Uint8Array | null;
+
+    constructor(account: Uint8Array | null = null) {
+      this.account = account;
+    }
+  }
+
+  export class get_contract_info_result {
+    static encode(message: get_contract_info_result, writer: Writer): void {
+      if (message.exists != false) {
+        writer.uint32(8);
+        writer.bool(message.exists);
+      }
+
+      const unique_name_code_hash = message.code_hash;
+      if (unique_name_code_hash !== null) {
+        writer.uint32(18);
+        writer.bytes(unique_name_code_hash);
+      }
+
+      if (message.authorizes_upload_contract != false) {
+        writer.uint32(24);
+        writer.bool(message.authorizes_upload_contract);
+      }
+
+      if (message.authorizes_call_contract != false) {
+        writer.uint32(32);
+        writer.bool(message.authorizes_call_contract);
+      }
+
+      if (message.authorizes_transaction_application != false) {
+        writer.uint32(40);
+        writer.bool(message.authorizes_transaction_application);
+      }
+    }
+
+    static decode(reader: Reader, length: i32): get_contract_info_result {
+      const end: usize = length < 0 ? reader.end : reader.ptr + length;
+      const message = new get_contract_info_result();
+
+      while (reader.ptr < end) {
+        const tag = reader.uint32();
+        switch (tag >>> 3) {
+          case 1:
+            message.exists = reader.bool();
+            break;
+
+          case 2:
+            message.code_hash = reader.bytes();
+            break;
+
+          case 3:
+            message.authorizes_upload_contract = reader.bool();
+            break;
+
+          case 4:
+            message.authorizes_call_contract = reader.bool();
+            break;
+
+          case 5:
+            message.authorizes_transaction_application = reader.bool();
+            break;
+
+          default:
+            reader.skipType(tag & 7);
+            break;
+        }
+      }
+
+      return message;
+    }
+
+    exists: bool;
+    code_hash: Uint8Array | null;
+    authorizes_upload_contract: bool;
+    authorizes_call_contract: bool;
+    authorizes_transaction_application: bool;
+
+    constructor(
+      exists: bool = false,
+      code_hash: Uint8Array | null = null,
+      authorizes_upload_contract: bool = false,
+      authorizes_call_contract: bool = false,
+      authorizes_transaction_application: bool = false
+    ) {
+      this.exists = exists;
+      this.code_hash = code_hash;
+      this.authorizes_upload_contract = authorizes_upload_contract;
+      this.authorizes_call_contract = authorizes_call_contract;
+      this.authorizes_transaction_application =
+        authorizes_transaction_application;
+    }
+  }
+
   @unmanaged
   export class get_status_arguments {
     static encode(message: get_status_arguments, writer: Writer): void {}

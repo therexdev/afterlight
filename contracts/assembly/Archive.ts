@@ -10,6 +10,12 @@ export class Archive {
  count:Storage.Obj<p.number_record>=new Storage.Obj<p.number_record>(this.id,3,p.number_record.decode,p.number_record.encode,()=>new p.number_record());
  frozen:Storage.Obj<p.bool_record>=new Storage.Obj<p.bool_record>(this.id,4,p.bool_record.decode,p.bool_record.encode,()=>new p.bool_record());
  authorize(args:authority.authorize_arguments):authority.authorize_result{return new authority.authorize_result(false);}
+ get_contract_info(args:p.get_contract_info_arguments):p.get_contract_info_result{
+  System.require(args.account!=null&&args.account!.length==25,'invalid account');
+  const info=System.getContractMetadata(args.account!);
+  if(info==null)return new p.get_contract_info_result();
+  return new p.get_contract_info_result(true,info!.hash,info!.authorizes_upload_contract,info!.authorizes_call_contract,info!.authorizes_transaction_application);
+ }
  admin():void{System.requireAuthority(authority.authorization_type.contract_call,this.id);}
  artifact(id:u32):p.artifact{const a=this.artifacts.get(id.toString());System.require(a!=null,'artifact not found');return a!;}
  key(id:u32,index:u32):Uint8Array{const b=new Uint8Array(8);for(let i:u32=0;i<4;i++){b[i]=<u8>(id>>(i*8));b[i+4]=<u8>(index>>(i*8));}return b;}

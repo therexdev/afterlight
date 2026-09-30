@@ -7,6 +7,7 @@ const works = collection.items;
 let client, config, chainState, selected, accounts = [], account = '', busy = false, action, refreshVersion = 0;
 const element = (tag, text, className) => { const node = document.createElement(tag); if (text != null) node.textContent = text; if (className) node.className = className; return node; };
 const status = (text, error = false) => { $('network-status').textContent = text; $('network-status').classList.toggle('error', error); };
+const currency = () => config?.currencySymbol || 'KOIN';
 const short = value => value ? value.slice(0, 7) + '…' + value.slice(-6) : '';
 const token = id => chainState?.tokens.find(item => item.id === id);
 const sale = id => token(id)?.sale;
@@ -46,7 +47,7 @@ function render() {
     const caption = element('p', work.caption);
     const row = element('div', null, 'card-sale');
     const offer = sale(work.id), owned = isOwned(work.id);
-    let text = !config.enabled ? '500 KOIN · not open yet' : offer?.active ? formatKoin(offer.price)+' KOIN' : token(work.id) ? (owned?'In your collection':'Held in a collection') : 'Not minted yet';
+    let text = !config.enabled ? '500 '+currency()+' · not open yet' : offer?.active ? formatKoin(offer.price)+' '+currency() : token(work.id) ? (owned?'In your collection':'Held in a collection') : 'Not minted yet';
     if (config.enabled && !chainState) text = 'Availability unavailable';
     row.append(element('strong',text)); const view = element('button',owned?'Manage':offer?.active?'View listing':'View work'); view.addEventListener('click',()=>openWork(work)); row.append(view);
     card.append(open,caption,row); $('market-grid').append(card);
@@ -62,7 +63,7 @@ function render() {
 }
 async function refresh() {
   const version = ++refreshVersion;
-  if (!config.enabled) { status('The collection is prepared for launch. Mainnet sales and resales are not open yet.'); chainState = null; render(); return; }
+  if (!config.enabled) { status(config.networkLabel+' · The collection is prepared. Sales and resales are not open yet.'); chainState = null; render(); return; }
   status('Reading ownership and listings from Koinos…');
   try {
     const next = await client.state(); if (version !== refreshVersion) return; chainState = next;
@@ -76,7 +77,7 @@ async function walletChanged() {
   render(); if(selected)renderDetail();
   if(account) {
     const captured=account;
-    try { const b=await client.balances(account);if(account===captured)$('wallet-balances').textContent=formatKoin(b.balance)+' KOIN · '+formatKoin(b.mana)+' Mana available'; }
+    try { const b=await client.balances(account);if(account===captured)$('wallet-balances').textContent=formatKoin(b.balance)+' '+currency()+' · '+formatKoin(b.mana)+' Mana available'; }
     catch { if(account===captured)$('wallet-balances').textContent='Balance temporarily unavailable'; }
   }
 }
@@ -96,8 +97,8 @@ function renderDetail() {
   $('market-download').href=work.file;$('market-download').download=work.slug+'.webp';
   $('recover-image').disabled=!config.archiveId;$('listing-form').hidden=true;$('transfer-form').hidden=true;
   const area=$('purchase-actions');area.replaceChildren();const offer=sale(work.id),record=token(work.id),owned=isOwned(work.id);
-  $('ownership-state').textContent=!config.enabled?'This artwork is not on mainnet yet.':record?'Owner: '+record.owner:chainState?'This artwork is awaiting minting.':'Live ownership is unavailable.';
-  if(!config.enabled){area.append(element('strong','500 KOIN'),element('p','Initial listing price. Sales have not opened yet.'));return;}
+  $('ownership-state').textContent=!config.enabled?'This artwork has not been deployed to '+config.networkLabel+' yet.':record?'Owner: '+record.owner:chainState?'This artwork is awaiting minting.':'Live ownership is unavailable.';
+  if(!config.enabled){area.append(element('strong','500 '+currency()),element('p','Initial listing price. Sales have not opened yet.'));return;}
   if(!chainState){area.append(element('p','Refresh the page to load current ownership before transacting.'));return;}
   if(owned){
     area.append(element('p','This work is in your collection.'));
@@ -105,7 +106,7 @@ function renderDetail() {
     if(offer&&!offer.primary)area.append(button('Cancel listing',()=>review('cancel_listing',{seller:account,token_id:tokenId(work.id)},'Cancel this listing',[['Work',work.name],['Owner',account]],'The NFT stays in your wallet.'),true));
     area.append(button('Send to someone',()=>{$('transfer-form').hidden=false;$('listing-form').hidden=true;$('transfer-address').focus();},true));
   }else if(offer?.active){
-    area.append(element('strong',formatKoin(offer.price)+' KOIN'),element('p',offer.primary?'Initial collection listing.':'Offered by '+short(offer.seller)+'.'));
+    area.append(element('strong',formatKoin(offer.price)+' '+currency()),element('p',offer.primary?'Initial collection listing.':'Offered by '+short(offer.seller)+'.'));
     area.append(button(account?'Review purchase':'Connect to collect',()=>account?preparePurchase():connect()));
   }else area.append(element('p',chainState.config.paused?'Purchases are temporarily paused.':'This work is not currently offered for sale.'));
 }
@@ -118,9 +119,9 @@ async function preparePurchase(){
   try {
     const offer=await client.quote(selected.id);
     const balances=await client.balances(account);
-    if(BigInt(balances.balance)<BigInt(offer.price))throw Error('Your selected wallet does not have enough KOIN for this purchase.');
+    if(BigInt(balances.balance)<BigInt(offer.price))throw Error('Your selected wallet does not have enough '+currency()+' for this purchase.');
     const args={buyer:account,token_id:tokenId(selected.id),expected_seller:offer.seller,expected_price:offer.price,expected_revision:offer.revision||'0',deadline:String(Date.now()+600000)};
-    review('buy',args,'Collect '+selected.name,[['Price',formatKoin(offer.price)+' KOIN'],['Buyer',account],['Seller',offer.seller],['Payment goes to',offer.primary?chainState.config.treasury:offer.seller]],'The NFT and KOIN move together in one transaction. This quote expires in 10 minutes.');
+    review('buy',args,'Collect '+selected.name,[['Price',formatKoin(offer.price)+' '+currency()],['Buyer',account],['Seller',offer.seller],['Payment goes to',offer.primary?chainState.config.treasury:offer.seller]],'The NFT and '+currency()+' move together in one transaction. This quote expires in 10 minutes.');
   }catch(error){$('detail-message').textContent=error.message;}finally{busy=false;}
 }
 function review(method,args,title,fields,description){
@@ -140,7 +141,7 @@ $('submit-action').addEventListener('click',async()=>{
 $('listing-form').addEventListener('submit',event=>{
   event.preventDefault();if(busy)return;
   try{const price=parseKoin($('listing-price').value),days=Number($('listing-duration').value);if(![7,30,90].includes(days))throw Error('Choose a valid duration.');const expiry=Date.now()+days*86400000;
-    review('list_token',{seller:account,token_id:tokenId(selected.id),price,expires_at:String(expiry)},'Offer '+selected.name,[['Price',formatKoin(price)+' KOIN'],['Seller',account],['Expires',new Date(expiry).toLocaleString()]],'You retain ownership until someone purchases this listing. You receive the full listed price.');
+    review('list_token',{seller:account,token_id:tokenId(selected.id),price,expires_at:String(expiry)},'Offer '+selected.name,[['Price',formatKoin(price)+' '+currency()],['Seller',account],['Expires',new Date(expiry).toLocaleString()]],'You retain ownership until someone purchases this listing. You receive the full listed price.');
   }catch(error){$('detail-message').textContent=error.message;}
 });
 $('transfer-form').addEventListener('submit',event=>{event.preventDefault();if(busy)return;try{const to=address($('transfer-address').value.trim());if(to===account)throw Error('Choose a different recipient.');review('transfer',{from:account,to,token_id:tokenId(selected.id)},'Send '+selected.name,[['From',account],['To',to]],'This transfers ownership to the recipient and cancels any listing. Check the address carefully.');}catch(error){$('detail-message').textContent=error.message;}});
@@ -159,6 +160,7 @@ $('check-pending').addEventListener('click',async()=>{const tx=pending();if(!tx|
 async function start(){
   try{
     const response=await fetch('network-config.json',{cache:'no-store'});if(!response.ok)throw Error('Missing network configuration.');config=await response.json();client=new ChainClient(config);
+    if(config.currencySymbol==='tKOIN'){const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=walker.nextNode()){if(!['SCRIPT','STYLE'].includes(n.parentElement?.tagName))n.textContent=n.textContent.replace(/\bKOIN\b/g,'tKOIN');}}
     for(const theme of [...new Set(works.map(work=>work.theme))]){const option=element('option',theme);option.value=theme;$('theme-filter').append(option);}
     await refresh();pendingNotice();const id=Number(new URL(location.href).searchParams.get('work'));if(id){const work=works.find(w=>w.id===id);if(work)openWork(work);}
   }catch(error){status('The collection could not start: '+error.message,true);$('connect-wallet').disabled=true;}

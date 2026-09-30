@@ -500,6 +500,44 @@
               }
             }
           },
+          "get_contract_info_arguments": {
+            "fields": {
+              "account": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "get_contract_info_result": {
+            "fields": {
+              "exists": {
+                "type": "bool",
+                "id": 1
+              },
+              "code_hash": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "authorizes_upload_contract": {
+                "type": "bool",
+                "id": 3
+              },
+              "authorizes_call_contract": {
+                "type": "bool",
+                "id": 4
+              },
+              "authorizes_transaction_application": {
+                "type": "bool",
+                "id": 5
+              }
+            }
+          },
           "get_status_arguments": {
             "fields": {}
           },
