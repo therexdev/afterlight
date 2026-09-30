@@ -1,0 +1,32 @@
+{
+  "name": "Seats Around the Router",
+  "description": "The room depended on one box to connect everyone inside it.\n\nThe seats still face each other. The community has reasons to remain when the hardware stops.",
+  "image": "world-art/seats-around-the-router.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "26f1a3479c8b49325175c1668a72cedd49255666576c726e3fcf93688679fecb",
+    "mime_type": "image/webp",
+    "byte_length": 159752,
+    "artifact_id": 36,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

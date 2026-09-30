@@ -1,0 +1,32 @@
+{
+  "name": "The Stack Has Openings",
+  "description": "The archive grew by adding more layers to the same closed stack.\n\nOpenings now interrupt it. More data need not mean a taller wall around it.",
+  "image": "world-art/the-stack-has-openings.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "b5da73aaa27f180af8ae004459abbd7fb29b5cd0e54f39a32f277cb04ac3e83f",
+    "mime_type": "image/webp",
+    "byte_length": 119884,
+    "artifact_id": 62,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

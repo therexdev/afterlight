@@ -1,0 +1,32 @@
+{
+  "name": "Five Empty Spools",
+  "description": "Time was held in a sequence that one machine had to replay.\n\nThe ribbon can cross several supports. History can be carried without trusting a single player.",
+  "image": "world-art/five-empty-spools.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "540fd1eeefef1678a8a7bcd4f1039b2b416d483e394338fafc902e71549afe88",
+    "mime_type": "image/webp",
+    "byte_length": 158752,
+    "artifact_id": 65,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

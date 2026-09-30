@@ -1,0 +1,32 @@
+{
+  "name": "The House Built From Cases",
+  "description": "Each case once held a private world that disappeared when its host failed.\n\nTogether the cases make a shared shelter. The parts of the old world can support a more open one.",
+  "image": "world-art/the-house-built-from-cases.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "7c792728d3a0eb51dd7996a30375bd255028a3f46a7ec2141e71c6188cafa7aa",
+    "mime_type": "image/webp",
+    "byte_length": 163298,
+    "artifact_id": 98,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

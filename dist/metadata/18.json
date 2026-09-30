@@ -1,0 +1,32 @@
+{
+  "name": "The Visitor Book",
+  "description": "Names were entered into a book whose keeper controlled the room.\n\nThe pages can travel. A record of participation no longer requires a permanent receptionist.",
+  "image": "world-art/the-visitor-book.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "2a93ad92a5685b85e7a917a7562d1e0b491ee09c98fba9cc4e34ef797cd5a753",
+    "mime_type": "image/webp",
+    "byte_length": 150572,
+    "artifact_id": 18,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,1014 @@
+{
+  "methods": {
+    "get_status": {
+      "argument": "afterlight.get_status_arguments",
+      "return": "afterlight.get_status_result",
+      "entry_point": 1926086621,
+      "read_only": true
+    },
+    "get_artifact": {
+      "argument": "afterlight.get_artifact_arguments",
+      "return": "afterlight.get_artifact_result",
+      "entry_point": 2647945643,
+      "read_only": true
+    },
+    "get_chunk": {
+      "argument": "afterlight.get_chunk_arguments",
+      "return": "afterlight.get_chunk_result",
+      "entry_point": 2461138064,
+      "read_only": true
+    },
+    "begin_artifact": {
+      "argument": "afterlight.begin_artifact_arguments",
+      "return": "afterlight.begin_artifact_result",
+      "entry_point": 3353112958,
+      "read_only": false
+    },
+    "upload_chunk": {
+      "argument": "afterlight.upload_chunk_arguments",
+      "return": "afterlight.upload_chunk_result",
+      "entry_point": 1727080106,
+      "read_only": false
+    },
+    "finalize_artifact": {
+      "argument": "afterlight.finalize_artifact_arguments",
+      "return": "afterlight.finalize_artifact_result",
+      "entry_point": 4088679071,
+      "read_only": false
+    },
+    "seal_archive": {
+      "argument": "afterlight.seal_archive_arguments",
+      "return": "afterlight.seal_archive_result",
+      "entry_point": 2011003193,
+      "read_only": false
+    }
+  },
+  "types": {
+    "nested": {
+      "afterlight": {
+        "nested": {
+          "royalty": {
+            "fields": {
+              "percentage": {
+                "type": "uint64",
+                "id": 1
+              },
+              "address": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "artifact": {
+            "fields": {
+              "artifact_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "name": {
+                "type": "string",
+                "id": 2
+              },
+              "mime": {
+                "type": "string",
+                "id": 3
+              },
+              "byte_length": {
+                "type": "uint32",
+                "id": 4
+              },
+              "sha256": {
+                "type": "bytes",
+                "id": 5,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "metadata": {
+                "type": "string",
+                "id": 6
+              },
+              "chunks": {
+                "type": "uint32",
+                "id": 7
+              },
+              "uploaded": {
+                "type": "uint32",
+                "id": 8
+              },
+              "finalized": {
+                "type": "bool",
+                "id": 9
+              }
+            }
+          },
+          "token_record": {
+            "fields": {
+              "owner": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "approved": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "revision": {
+                "type": "uint64",
+                "id": 3
+              }
+            }
+          },
+          "number_record": {
+            "fields": {
+              "value": {
+                "type": "uint64",
+                "id": 1
+              }
+            }
+          },
+          "bool_record": {
+            "fields": {
+              "value": {
+                "type": "bool",
+                "id": 1
+              }
+            }
+          },
+          "chunk_record": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1
+              }
+            }
+          },
+          "operator_list": {
+            "fields": {
+              "values": {
+                "rule": "repeated",
+                "type": "bytes",
+                "id": 1
+              }
+            }
+          },
+          "configuration": {
+            "fields": {
+              "archive": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "treasury": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "payment_token": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "base_uri": {
+                "type": "string",
+                "id": 4
+              },
+              "launched": {
+                "type": "bool",
+                "id": 5
+              },
+              "paused": {
+                "type": "bool",
+                "id": 6
+              }
+            }
+          },
+          "listing": {
+            "fields": {
+              "seller": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "price": {
+                "type": "uint64",
+                "id": 2
+              },
+              "revision": {
+                "type": "uint64",
+                "id": 3
+              },
+              "expires_at": {
+                "type": "uint64",
+                "id": 4
+              },
+              "primary": {
+                "type": "bool",
+                "id": 5
+              },
+              "active": {
+                "type": "bool",
+                "id": 6
+              }
+            }
+          },
+          "token_view": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "owner": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "sale": {
+                "type": "listing",
+                "id": 3
+              }
+            }
+          },
+          "mint_event": {
+            "fields": {
+              "to": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "transfer_event": {
+            "fields": {
+              "from": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "to": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "token_approval_event": {
+            "fields": {
+              "approver_address": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "to": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "operator_approval_event": {
+            "fields": {
+              "approver_address": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "operator_address": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "approved": {
+                "type": "bool",
+                "id": 3
+              }
+            }
+          },
+          "sale_event": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "seller": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "buyer": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "price": {
+                "type": "uint64",
+                "id": 4
+              },
+              "primary": {
+                "type": "bool",
+                "id": 5
+              },
+              "revision": {
+                "type": "uint64",
+                "id": 6
+              }
+            }
+          },
+          "listing_event": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "sale": {
+                "type": "listing",
+                "id": 2
+              }
+            }
+          },
+          "get_status_arguments": {
+            "fields": {}
+          },
+          "get_status_result": {
+            "fields": {
+              "minted": {
+                "type": "uint32",
+                "id": 1
+              },
+              "sealed": {
+                "type": "bool",
+                "id": 2
+              },
+              "supply_cap": {
+                "type": "uint32",
+                "id": 3
+              },
+              "chunk_bytes": {
+                "type": "uint32",
+                "id": 4
+              },
+              "max_artifact_bytes": {
+                "type": "uint32",
+                "id": 5
+              }
+            }
+          },
+          "get_artifact_arguments": {
+            "fields": {
+              "artifact_id": {
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          },
+          "get_artifact_result": {
+            "fields": {
+              "value": {
+                "type": "artifact",
+                "id": 1
+              }
+            }
+          },
+          "get_chunk_arguments": {
+            "fields": {
+              "artifact_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "index": {
+                "type": "uint32",
+                "id": 2
+              }
+            }
+          },
+          "get_chunk_result": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1
+              }
+            }
+          },
+          "begin_artifact_arguments": {
+            "fields": {
+              "artifact_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "name": {
+                "type": "string",
+                "id": 2
+              },
+              "mime": {
+                "type": "string",
+                "id": 3
+              },
+              "byte_length": {
+                "type": "uint32",
+                "id": 4
+              },
+              "sha256": {
+                "type": "bytes",
+                "id": 5,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "metadata": {
+                "type": "string",
+                "id": 6
+              }
+            }
+          },
+          "begin_artifact_result": {
+            "fields": {}
+          },
+          "upload_chunk_arguments": {
+            "fields": {
+              "artifact_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "index": {
+                "type": "uint32",
+                "id": 2
+              },
+              "data": {
+                "type": "bytes",
+                "id": 3
+              }
+            }
+          },
+          "upload_chunk_result": {
+            "fields": {}
+          },
+          "finalize_artifact_arguments": {
+            "fields": {
+              "artifact_id": {
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          },
+          "finalize_artifact_result": {
+            "fields": {}
+          },
+          "seal_archive_arguments": {
+            "fields": {}
+          },
+          "seal_archive_result": {
+            "fields": {}
+          },
+          "name_arguments": {
+            "fields": {}
+          },
+          "name_result": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "symbol_arguments": {
+            "fields": {}
+          },
+          "symbol_result": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "uri_arguments": {
+            "fields": {}
+          },
+          "uri_result": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "token_uri_arguments": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "token_uri_result": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "owner_arguments": {
+            "fields": {}
+          },
+          "owner_result": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "total_supply_arguments": {
+            "fields": {}
+          },
+          "total_supply_result": {
+            "fields": {
+              "value": {
+                "type": "uint64",
+                "id": 1
+              }
+            }
+          },
+          "balance_of_arguments": {
+            "fields": {
+              "owner": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "balance_of_result": {
+            "fields": {
+              "value": {
+                "type": "uint64",
+                "id": 1
+              }
+            }
+          },
+          "owner_of_arguments": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "owner_of_result": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "get_approved_arguments": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "get_approved_result": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "is_approved_for_all_arguments": {
+            "fields": {
+              "owner": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "operator": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "is_approved_for_all_result": {
+            "fields": {
+              "value": {
+                "type": "bool",
+                "id": 1
+              }
+            }
+          },
+          "royalties_arguments": {
+            "fields": {}
+          },
+          "royalties_result": {
+            "fields": {
+              "value": {
+                "rule": "repeated",
+                "type": "royalty",
+                "id": 1
+              }
+            }
+          },
+          "get_config_arguments": {
+            "fields": {}
+          },
+          "get_config_result": {
+            "fields": {
+              "value": {
+                "type": "configuration",
+                "id": 1
+              }
+            }
+          },
+          "get_metadata_arguments": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "get_metadata_result": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "get_listing_arguments": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "get_listing_result": {
+            "fields": {
+              "value": {
+                "type": "listing",
+                "id": 1
+              }
+            }
+          },
+          "get_tokens_arguments": {
+            "fields": {
+              "start": {
+                "type": "uint32",
+                "id": 1
+              },
+              "limit": {
+                "type": "uint32",
+                "id": 2
+              }
+            }
+          },
+          "get_tokens_result": {
+            "fields": {
+              "values": {
+                "rule": "repeated",
+                "type": "token_view",
+                "id": 1
+              }
+            }
+          },
+          "initialize_arguments": {
+            "fields": {
+              "archive": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "treasury": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "payment_token": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "base_uri": {
+                "type": "string",
+                "id": 4
+              }
+            }
+          },
+          "initialize_result": {
+            "fields": {}
+          },
+          "mint_arguments": {
+            "fields": {
+              "token_id": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "mint_result": {
+            "fields": {}
+          },
+          "open_sales_arguments": {
+            "fields": {}
+          },
+          "open_sales_result": {
+            "fields": {}
+          },
+          "set_paused_arguments": {
+            "fields": {
+              "paused": {
+                "type": "bool",
+                "id": 1
+              }
+            }
+          },
+          "set_paused_result": {
+            "fields": {}
+          },
+          "transfer_arguments": {
+            "fields": {
+              "from": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "to": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "transfer_result": {
+            "fields": {}
+          },
+          "approve_arguments": {
+            "fields": {
+              "approver_address": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "to": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "approve_result": {
+            "fields": {}
+          },
+          "set_approval_for_all_arguments": {
+            "fields": {
+              "approver_address": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "operator_address": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "approved": {
+                "type": "bool",
+                "id": 3
+              }
+            }
+          },
+          "set_approval_for_all_result": {
+            "fields": {}
+          },
+          "list_token_arguments": {
+            "fields": {
+              "seller": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "price": {
+                "type": "uint64",
+                "id": 3
+              },
+              "expires_at": {
+                "type": "uint64",
+                "id": 4
+              }
+            }
+          },
+          "list_token_result": {
+            "fields": {}
+          },
+          "cancel_listing_arguments": {
+            "fields": {
+              "seller": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              }
+            }
+          },
+          "cancel_listing_result": {
+            "fields": {}
+          },
+          "buy_arguments": {
+            "fields": {
+              "buyer": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_id": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "HEX"
+                }
+              },
+              "expected_seller": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "expected_price": {
+                "type": "uint64",
+                "id": 4
+              },
+              "expected_revision": {
+                "type": "uint64",
+                "id": 5
+              },
+              "deadline": {
+                "type": "uint64",
+                "id": 6
+              }
+            }
+          },
+          "buy_result": {
+            "fields": {}
+          }
+        }
+      }
+    }
+  }
+}

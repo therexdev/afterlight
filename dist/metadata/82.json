@@ -1,0 +1,32 @@
+{
+  "name": "The Shopfront Unlatched",
+  "description": "The storefront made culture available through a purchase.\n\nIts shutters open into a place to stay. A collector can support the work while others continue to encounter it.",
+  "image": "world-art/the-shopfront-unlatched.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "3b9bdb72f429b46eb50025719d9248da97f684d7108eae71b83d8936f46e90c1",
+    "mime_type": "image/webp",
+    "byte_length": 153258,
+    "artifact_id": 82,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

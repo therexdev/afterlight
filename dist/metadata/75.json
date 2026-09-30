@@ -1,0 +1,32 @@
+{
+  "name": "The Receipt Stair",
+  "description": "The receipt was proof of a purchase inside one company's system.\n\nThe record becomes a stair anyone can inspect. Verification can survive the seller's disappearance.",
+  "image": "world-art/the-receipt-stair.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "eb8cac63d644aff7f50446cc34abdce82c248b03c41ec26880ff9622e11c4bfe",
+    "mime_type": "image/webp",
+    "byte_length": 117142,
+    "artifact_id": 75,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

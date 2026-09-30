@@ -1,0 +1,32 @@
+{
+  "name": "The Coat Hook",
+  "description": "A plastic badge explained who someone was allowed to be inside one building.\n\nThe hook is emptying. The person can leave without leaving their history behind.",
+  "image": "world-art/the-coat-hook.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "710e5312d0cebe0cb50b2ff2014df7c7ee992d4d9fccdc6e319d71d98a99900f",
+    "mime_type": "image/webp",
+    "byte_length": 94602,
+    "artifact_id": 17,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Open After Hours",
+  "description": "The archive opened only while its keeper was at work.\n\nThe shutter now offers a seat. Reading need not stop when the office closes.",
+  "image": "world-art/open-after-hours.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Access"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "0b3d43b16c6b4cb35989b2207a4721806d0d962b800b0e0a03daa73d0763a12f",
+    "mime_type": "image/webp",
+    "byte_length": 155116,
+    "artifact_id": 12,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

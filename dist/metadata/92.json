@@ -1,0 +1,32 @@
+{
+  "name": "The Seed in the Drive Bay",
+  "description": "The empty bay seemed to mark the end of a stored life.\n\nA seed occupies it now. What survives can become the beginning of another use.",
+  "image": "world-art/the-seed-in-the-drive-bay.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "f08443711efbb9b808f39a1bd3ad58dd803ef7934a6fe7e91e6e5e0806009551",
+    "mime_type": "image/webp",
+    "byte_length": 127220,
+    "artifact_id": 92,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

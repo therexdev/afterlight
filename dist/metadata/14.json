@@ -1,0 +1,32 @@
+{
+  "name": "The Gate Folded Flat",
+  "description": "The gate was designed to expand across an opening.\n\nIt now reaches across a gap. The same material offers passage instead of permission.",
+  "image": "world-art/the-gate-folded-flat.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Access"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "99d3b5e831e7ebed98d1b61c5f8e146ded31bd88276fcbf55be27079bca9a210",
+    "mime_type": "image/webp",
+    "byte_length": 135176,
+    "artifact_id": 14,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

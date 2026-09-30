@@ -1,0 +1,32 @@
+{
+  "name": "The Shelf Becomes a Nursery",
+  "description": "The shelf preserved machines that would eventually stop working.\n\nIt now holds beginnings. Preservation has meaning when someone can use what survives.",
+  "image": "world-art/the-shelf-becomes-a-nursery.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "8e70e268f8abb2d1475162d7e6e7b4e62574d158ff794735f25464435e40beaf",
+    "mime_type": "image/webp",
+    "byte_length": 164734,
+    "artifact_id": 95,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

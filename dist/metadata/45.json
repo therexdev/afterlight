@@ -1,0 +1,32 @@
+{
+  "name": "The Index Set Free",
+  "description": "The index was useful only to those admitted to the catalog room.\n\nThe cards have left their drawers. New readers can arrange another route through the same knowledge.",
+  "image": "world-art/the-index-set-free.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "8c463d21de85ab3ebfc569a811de3a4989660b10393e0ab87bc670e11833630f",
+    "mime_type": "image/webp",
+    "byte_length": 169696,
+    "artifact_id": 45,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

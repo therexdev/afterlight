@@ -1,0 +1,32 @@
+{
+  "name": "The Timetable Removed",
+  "description": "The route existed only at the times printed by its operator.\n\nThe frame becomes a crossing. The people who need the path can keep another route open.",
+  "image": "world-art/the-timetable-removed.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "385db4ff38353794f3e72609256ce38814a539d7a0c63188a0dc715130666f64",
+    "mime_type": "image/webp",
+    "byte_length": 112932,
+    "artifact_id": 70,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

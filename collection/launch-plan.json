@@ -1,0 +1,15 @@
+{
+  "network": "Koinos mainnet",
+  "contractsPrepared": false,
+  "artworks": 100,
+  "archivedViewer": true,
+  "imageBytes": 13763010,
+  "totalArchiveBytes": 13770849,
+  "uploadChunks": 890,
+  "initialPriceKoin": 500,
+  "totalInitialListingsKoin": 50000,
+  "archiveUpgradeable": false,
+  "collectionUpgradeable": true,
+  "mainnetBroadcast": false,
+  "next": "Run npm run prepare:wallet -- --network mainnet, then back up the generated local wallet file."
+}

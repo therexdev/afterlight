@@ -1,0 +1,32 @@
+{
+  "name": "The Cartridge House",
+  "description": "The recording lived inside a sealed format and the machine that understood it.\n\nThe cartridge opens into a home. Its contents can be read without preserving every old wall.",
+  "image": "world-art/the-cartridge-house.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "2a31484e9d2cecf9a56c3dab1edfdf8c1b913f0697212e447ceda64251278f3b",
+    "mime_type": "image/webp",
+    "byte_length": 141676,
+    "artifact_id": 60,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

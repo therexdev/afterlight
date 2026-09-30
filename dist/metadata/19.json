@@ -1,0 +1,32 @@
+{
+  "name": "Two Handles One Door",
+  "description": "The account felt personal, but the service held the other handle.\n\nThe panel stands free of its wall. Leaving one service need not erase the person using it.",
+  "image": "world-art/two-handles-one-door.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "54a4289c2f5242e3043f0d3172d76932f673196c50417063354e2d1930011a8b",
+    "mime_type": "image/webp",
+    "byte_length": 132346,
+    "artifact_id": 19,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

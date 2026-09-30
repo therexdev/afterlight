@@ -1,0 +1,32 @@
+{
+  "name": "The Spare Copy",
+  "description": "A single copy made the keeper indispensable.\n\nThe second copy makes another reader possible. Continuity begins with a record that can leave the shelf.",
+  "image": "world-art/the-spare-copy.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "8911f87ab0d2a98a33817723fde4095885b27a4a56a2b277946ff4d8c794bac7",
+    "mime_type": "image/webp",
+    "byte_length": 119574,
+    "artifact_id": 50,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Nameplate Unbolted",
+  "description": "A name belonged to an account before it belonged to its owner.\n\nThe plate can be carried away. Identity becomes something a person brings with them.",
+  "image": "world-art/the-nameplate-unbolted.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "60aca44a379042c6feea5d402882a6847c93771ab02ec21d2b8147ad83dfb751",
+    "mime_type": "image/webp",
+    "byte_length": 174718,
+    "artifact_id": 16,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Price Tag Detached",
+  "description": "The tag described ownership as though it also described who could see.\n\nRemoved from the door, it tells a smaller story. Owning a token need not close the artwork to everyone else.",
+  "image": "world-art/the-price-tag-detached.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "e81b8f1d2658869a8fbbb364ffb498f4e2011232177c8955075f09d962412d4d",
+    "mime_type": "image/webp",
+    "byte_length": 130696,
+    "artifact_id": 76,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

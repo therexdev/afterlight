@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "title": "AFTERLIGHT",
+  "created": "2026-09-29",
+  "maxBytes": 200000,
+  "chunkBytes": 16384,
+  "totalBytes": 773552,
+  "deployment": {
+    "network": "Koinos Foundation Testnet",
+    "chainId": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+    "rpc": "https://testnet.koinosfoundation.org/jsonrpc",
+    "contractId": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+    "status": "live",
+    "minted": 6,
+    "sealed": true,
+    "transactions": [
+      {
+        "label": "Deploy immutable collection contract",
+        "id": "0x1220871c39bf2c94daefd26289e68bc76225c50ab5e9fc99c887177632af83a5e841",
+        "block": 8794364,
+        "rcUsed": "502300790",
+        "diskBytes": "63555",
+        "networkBytes": "73410",
+        "compute": "550702"
+      },
+      {
+        "label": "Upload and finalize First Light",
+        "id": "0x12202d5c67a2b6774fbbbd155d63d30e257ec5efa2ef9a9ae3d03c9d12f257311ee4",
+        "block": 8794444,
+        "rcUsed": "1248966954",
+        "diskBytes": "145309",
+        "networkBytes": "145633",
+        "compute": "25864703"
+      },
+      {
+        "label": "Mint First Light",
+        "id": "0x1220e2cc0137a9135d8d4c147952e9fb349550c4dd3dfee4b39ab0f3f7dbe70fe7fd",
+        "block": 8794471,
+        "rcUsed": "5388791",
+        "diskBytes": "154",
+        "networkBytes": "282",
+        "compute": "814573"
+      },
+      {
+        "label": "Upload and finalize The Last Seed",
+        "id": "0x12205673cfa02fb4d8228af2149f92490025bbb549c3fbd0478fb58cc028471815f5",
+        "block": 8794486,
+        "rcUsed": "817201479",
+        "diskBytes": "94673",
+        "networkBytes": "94973",
+        "compute": "17526292"
+      },
+      {
+        "label": "Mint The Last Seed",
+        "id": "0x122006170a006e7b49187ad5977f85c6722919b94b7e593a83c0bad3dda62ede24d9",
+        "block": 8794517,
+        "rcUsed": "4833516",
+        "diskBytes": "61",
+        "networkBytes": "282",
+        "compute": "827952"
+      },
+      {
+        "label": "Upload and finalize Memory of Rain",
+        "id": "0x122055fd94f57b9fc3eaabecad882e5a1a2b8f0d0c59e40d506f9bf29506a57ca46a",
+        "block": 8794540,
+        "rcUsed": "1146774142",
+        "diskBytes": "133085",
+        "networkBytes": "133409",
+        "compute": "24258435"
+      },
+      {
+        "label": "Mint Memory of Rain",
+        "id": "0x12205edadf495cbe28f89790f1cc182e3cc31a1df0cf11541fa6897eb04f1c54535d",
+        "block": 8794574,
+        "rcUsed": "4836112",
+        "diskBytes": "61",
+        "networkBytes": "282",
+        "compute": "828459"
+      },
+      {
+        "label": "Upload and finalize A Quiet Orbit",
+        "id": "0x1220e7db3249bb4e81ed55f419573a90132f153bc033f052127d046435c740fefddf",
+        "block": 8794595,
+        "rcUsed": "1132218040",
+        "diskBytes": "131663",
+        "networkBytes": "131979",
+        "compute": "23513236"
+      },
+      {
+        "label": "Mint A Quiet Orbit",
+        "id": "0x1220ad23be526f5f23784477fe9c45faa625fb8b0d7de15391df6620694f697d9be8",
+        "block": 8794636,
+        "rcUsed": "4836307",
+        "diskBytes": "61",
+        "networkBytes": "282",
+        "compute": "828498"
+      },
+      {
+        "label": "Upload and finalize The Unsent Letter",
+        "id": "0x12207e89375229d2f8e05b9cdb0015c40d6e7dcc449367d82779ae4181301568b84f",
+        "block": 8794669,
+        "rcUsed": "1037357001",
+        "diskBytes": "120342",
+        "networkBytes": "120658",
+        "compute": "21984425"
+      },
+      {
+        "label": "Mint The Unsent Letter",
+        "id": "0x12208924fd13e09ccef930e281d731775dc102b17ee373c044f976bc8bd2b215ff85",
+        "block": 8794707,
+        "rcUsed": "4838652",
+        "diskBytes": "61",
+        "networkBytes": "282",
+        "compute": "828967"
+      },
+      {
+        "label": "Upload and finalize Still Here",
+        "id": "0x1220c6eda8863ec557a5da9445dfc80f69bfe914122028039996b4fbf460c07c9c53",
+        "block": 8794731,
+        "rcUsed": "1337904827",
+        "diskBytes": "155654",
+        "networkBytes": "155986",
+        "compute": "27682019"
+      },
+      {
+        "label": "Mint Still Here",
+        "id": "0x1220ffd77e940424f57acd234820cdccf3f561c88e7e6e5624082f848d376f98a2e9",
+        "block": 8794774,
+        "rcUsed": "4829397",
+        "diskBytes": "61",
+        "networkBytes": "282",
+        "compute": "827116"
+      },
+      {
+        "label": "Upload and finalize The independent museum",
+        "id": "0x1220714733a706e983e9d8f3ece00d586cedcaea6290b3d9f26138b764d2d3acb874",
+        "block": 8794796,
+        "rcUsed": "88630841",
+        "diskBytes": "9491",
+        "networkBytes": "9750",
+        "compute": "3049962"
+      },
+      {
+        "label": "Seal six artifacts and recovery viewer",
+        "id": "0x1220cadfb163d4314dd8c7e4fd8543ac8348d05202fc3136fd90cd90864c1aaa7597",
+        "block": 8794819,
+        "rcUsed": "4101933",
+        "diskBytes": "33",
+        "networkBytes": "250",
+        "compute": "725576"
+      }
+    ],
+    "wasmSha256": "4bc389db75df39a41f93cdfc0bef4b7f0d424febb915746ddfe1955b804038e5",
+    "totalRcUsed": "7345018782"
+  },
+  "items": [
+    {
+      "id": 1,
+      "slug": "first-light",
+      "name": "First Light",
+      "color": "#ffac66",
+      "element": "Fire",
+      "material": "Solar glass",
+      "thought": "Someone saved a little of the sun.",
+      "description": "A miniature sun held inside a sphere of smoky glass. The first thing we chose to keep was the light that made everything else visible.",
+      "bytes": 144086,
+      "sha256": "5417145fc6ae33decf1e9ed53be76dc2de93b9fa9e6b6d4c0a9dbd6ef9236077",
+      "chunks": 9,
+      "file": "art/first-light.webp",
+      "metadata": {
+        "name": "AFTERLIGHT: First Light",
+        "description": "A miniature sun held inside a sphere of smoky glass. The first thing we chose to keep was the light that made everything else visible.",
+        "image": "koinos://1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2/artifact/1",
+        "attributes": [
+          {
+            "trait_type": "Element",
+            "value": "Fire"
+          },
+          {
+            "trait_type": "Material",
+            "value": "Solar glass"
+          },
+          {
+            "trait_type": "Edition",
+            "value": "1 of 1"
+          }
+        ],
+        "properties": {
+          "network": "Koinos Foundation Testnet",
+          "chain_id": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+          "contract": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+          "artifact_id": 1,
+          "sha256": "5417145fc6ae33decf1e9ed53be76dc2de93b9fa9e6b6d4c0a9dbd6ef9236077",
+          "bytes": 144086,
+          "mime": "image/webp",
+          "source": "on-chain bytes"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "slug": "the-last-seed",
+      "name": "The Last Seed",
+      "color": "#85efb8",
+      "element": "Earth",
+      "material": "Living crystal",
+      "thought": "A beginning, kept for later.",
+      "description": "An emerald seedling with golden roots, suspended in crystal. A small promise that an ending does not have to be the last page.",
+      "bytes": 93586,
+      "sha256": "ce065923c1694d13c4974c6ba8223a29a42cc85897fa65fb78945f10dc463f90",
+      "chunks": 6,
+      "file": "art/the-last-seed.webp",
+      "metadata": {
+        "name": "AFTERLIGHT: The Last Seed",
+        "description": "An emerald seedling with golden roots, suspended in crystal. A small promise that an ending does not have to be the last page.",
+        "image": "koinos://1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2/artifact/2",
+        "attributes": [
+          {
+            "trait_type": "Element",
+            "value": "Earth"
+          },
+          {
+            "trait_type": "Material",
+            "value": "Living crystal"
+          },
+          {
+            "trait_type": "Edition",
+            "value": "1 of 1"
+          }
+        ],
+        "properties": {
+          "network": "Koinos Foundation Testnet",
+          "chain_id": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+          "contract": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+          "artifact_id": 2,
+          "sha256": "ce065923c1694d13c4974c6ba8223a29a42cc85897fa65fb78945f10dc463f90",
+          "bytes": 93586,
+          "mime": "image/webp",
+          "source": "on-chain bytes"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "slug": "memory-of-rain",
+      "name": "Memory of Rain",
+      "color": "#88c9ff",
+      "element": "Water",
+      "material": "Storm glass",
+      "thought": "Even the sky leaves a trace.",
+      "description": "A glass cloud, a single falling drop, and the rings it leaves behind. A record of a passing moment that no longer has to disappear.",
+      "bytes": 131858,
+      "sha256": "75a6a89f342fd2202546c119fab1388a7aff98c94e126278d82a409ba1ca80d0",
+      "chunks": 9,
+      "file": "art/memory-of-rain.webp",
+      "metadata": {
+        "name": "AFTERLIGHT: Memory of Rain",
+        "description": "A glass cloud, a single falling drop, and the rings it leaves behind. A record of a passing moment that no longer has to disappear.",
+        "image": "koinos://1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2/artifact/3",
+        "attributes": [
+          {
+            "trait_type": "Element",
+            "value": "Water"
+          },
+          {
+            "trait_type": "Material",
+            "value": "Storm glass"
+          },
+          {
+            "trait_type": "Edition",
+            "value": "1 of 1"
+          }
+        ],
+        "properties": {
+          "network": "Koinos Foundation Testnet",
+          "chain_id": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+          "contract": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+          "artifact_id": 3,
+          "sha256": "75a6a89f342fd2202546c119fab1388a7aff98c94e126278d82a409ba1ca80d0",
+          "bytes": 131858,
+          "mime": "image/webp",
+          "source": "on-chain bytes"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "slug": "a-quiet-orbit",
+      "name": "A Quiet Orbit",
+      "color": "#bfaaff",
+      "element": "Space",
+      "material": "Lunar glass",
+      "thought": "Still moving. Still belonging.",
+      "description": "A lavender world surrounded by silver orbital rings. Distance becomes a kind of closeness when the same paths keep finding each other.",
+      "bytes": 130480,
+      "sha256": "71cc585890b3f249498927531aa80af0afb972bec1d74c89574f357cfd357991",
+      "chunks": 8,
+      "file": "art/a-quiet-orbit.webp",
+      "metadata": {
+        "name": "AFTERLIGHT: A Quiet Orbit",
+        "description": "A lavender world surrounded by silver orbital rings. Distance becomes a kind of closeness when the same paths keep finding each other.",
+        "image": "koinos://1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2/artifact/4",
+        "attributes": [
+          {
+            "trait_type": "Element",
+            "value": "Space"
+          },
+          {
+            "trait_type": "Material",
+            "value": "Lunar glass"
+          },
+          {
+            "trait_type": "Edition",
+            "value": "1 of 1"
+          }
+        ],
+        "properties": {
+          "network": "Koinos Foundation Testnet",
+          "chain_id": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+          "contract": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+          "artifact_id": 4,
+          "sha256": "71cc585890b3f249498927531aa80af0afb972bec1d74c89574f357cfd357991",
+          "bytes": 130480,
+          "mime": "image/webp",
+          "source": "on-chain bytes"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "slug": "the-unsent-letter",
+      "name": "The Unsent Letter",
+      "color": "#f2a9e9",
+      "element": "Memory",
+      "material": "Pearl glass",
+      "thought": "Some words deserve to outlast us.",
+      "description": "A pearlescent envelope lit from within. A message with no destination, preserved because the possibility of being understood was enough.",
+      "bytes": 119148,
+      "sha256": "fbd547e567b635c6141bc3019bc2d814724004cd0d52b4866fcc6e71a0983d48",
+      "chunks": 8,
+      "file": "art/the-unsent-letter.webp",
+      "metadata": {
+        "name": "AFTERLIGHT: The Unsent Letter",
+        "description": "A pearlescent envelope lit from within. A message with no destination, preserved because the possibility of being understood was enough.",
+        "image": "koinos://1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2/artifact/5",
+        "attributes": [
+          {
+            "trait_type": "Element",
+            "value": "Memory"
+          },
+          {
+            "trait_type": "Material",
+            "value": "Pearl glass"
+          },
+          {
+            "trait_type": "Edition",
+            "value": "1 of 1"
+          }
+        ],
+        "properties": {
+          "network": "Koinos Foundation Testnet",
+          "chain_id": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+          "contract": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+          "artifact_id": 5,
+          "sha256": "fbd547e567b635c6141bc3019bc2d814724004cd0d52b4866fcc6e71a0983d48",
+          "bytes": 119148,
+          "mime": "image/webp",
+          "source": "on-chain bytes"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "slug": "still-here",
+      "name": "Still Here",
+      "color": "#ff8c8c",
+      "element": "Life",
+      "material": "Ember glass",
+      "thought": "The smallest proof of persistence.",
+      "description": "A red glass heart held in an amber sphere. Not a promise of forever, but a record that something mattered, and that it was here.",
+      "bytes": 154394,
+      "sha256": "4bd745dd51ac41553ed804595541fb4ca356ce0445ddb97e73ce427f55ee2361",
+      "chunks": 10,
+      "file": "art/still-here.webp",
+      "metadata": {
+        "name": "AFTERLIGHT: Still Here",
+        "description": "A red glass heart held in an amber sphere. Not a promise of forever, but a record that something mattered, and that it was here.",
+        "image": "koinos://1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2/artifact/6",
+        "attributes": [
+          {
+            "trait_type": "Element",
+            "value": "Life"
+          },
+          {
+            "trait_type": "Material",
+            "value": "Ember glass"
+          },
+          {
+            "trait_type": "Edition",
+            "value": "1 of 1"
+          }
+        ],
+        "properties": {
+          "network": "Koinos Foundation Testnet",
+          "chain_id": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+          "contract": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+          "artifact_id": 6,
+          "sha256": "4bd745dd51ac41553ed804595541fb4ca356ce0445ddb97e73ce427f55ee2361",
+          "bytes": 154394,
+          "mime": "image/webp",
+          "source": "on-chain bytes"
+        }
+      }
+    }
+  ]
+}

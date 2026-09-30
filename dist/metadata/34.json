@@ -1,0 +1,32 @@
+{
+  "name": "The Room Beyond the Counter",
+  "description": "The platform measured a gathering by what passed through its counter.\n\nThe counter opens into a room. A community can value the people who stay, not only the transactions they make.",
+  "image": "world-art/the-room-beyond-the-counter.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "ff426ce8a5c1058fedf703ee667abfb0f5bb6b9a4b8ec5abee1265931feeb796",
+    "mime_type": "image/webp",
+    "byte_length": 148568,
+    "artifact_id": 34,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

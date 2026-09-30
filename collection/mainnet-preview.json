@@ -1,0 +1,233 @@
+{
+  "title": "AFTERLIGHT: The World That Was",
+  "status": "prelaunch",
+  "plannedSupply": 100,
+  "initialPriceKoin": 500,
+  "previewCount": 6,
+  "artDirection": "Tactile sculptural still life; midnight blue, ivory, and terracotta. AI-generated artwork.",
+  "items": [
+    {
+      "id": 1,
+      "slug": "the-last-login",
+      "name": "The Last Login",
+      "theme": "Access",
+      "relic": "The terminal",
+      "material": "Aged ivory plastic · terracotta · steel",
+      "old": "Permission",
+      "next": "Open access",
+      "caption": "The doorway outlasted the password.",
+      "was": "A password once stood between people and the lives they had recorded. When the platform went dark, the doorway remained, but the key no longer worked.",
+      "became": "The screen is gone. A path runs through the empty frame and continues beyond it. The record can be read without asking the old gatekeeper to open the door.",
+      "file": "world-art/the-last-login.webp",
+      "description": "The World That Was\nA password once stood between people and the lives they had recorded. When the platform went dark, the doorway remained, but the key no longer worked.\n\nThe World It Became\nThe screen is gone. A path runs through the empty frame and continues beyond it. The record can be read without asking the old gatekeeper to open the door.",
+      "attributes": [
+        {
+          "trait_type": "Theme",
+          "value": "Access"
+        },
+        {
+          "trait_type": "Relic",
+          "value": "The terminal"
+        },
+        {
+          "trait_type": "Old World",
+          "value": "Permission"
+        },
+        {
+          "trait_type": "New World",
+          "value": "Open access"
+        },
+        {
+          "trait_type": "Material",
+          "value": "Aged ivory plastic · terracotta · steel"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "the-cloud-came-down",
+      "name": "The Cloud Came Down",
+      "theme": "Storage",
+      "relic": "The server cabinet",
+      "material": "Painted steel · ivory housings · frosted acrylic",
+      "old": "Enclosure",
+      "next": "Distribution",
+      "caption": "What lived behind one door found many homes.",
+      "was": "They called it a cloud, though it lived behind someone else's doors. Photographs, promises, and entire histories waited inside machines their makers would never see.",
+      "became": "The cabinet opens. Its records are carried outward, each finding a place beyond the original enclosure. The old sign rests on the ground. No single door decides who can reach what remains.",
+      "file": "world-art/the-cloud-came-down.webp",
+      "description": "The World That Was\nThey called it a cloud, though it lived behind someone else's doors. Photographs, promises, and entire histories waited inside machines their makers would never see.\n\nThe World It Became\nThe cabinet opens. Its records are carried outward, each finding a place beyond the original enclosure. The old sign rests on the ground. No single door decides who can reach what remains.",
+      "attributes": [
+        {
+          "trait_type": "Theme",
+          "value": "Storage"
+        },
+        {
+          "trait_type": "Relic",
+          "value": "The server cabinet"
+        },
+        {
+          "trait_type": "Old World",
+          "value": "Enclosure"
+        },
+        {
+          "trait_type": "New World",
+          "value": "Distribution"
+        },
+        {
+          "trait_type": "Material",
+          "value": "Painted steel · ivory housings · frosted acrylic"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "the-letter-that-stayed",
+      "name": "The Letter That Stayed",
+      "theme": "Communication",
+      "relic": "The letter",
+      "material": "Textured paper · painted metal",
+      "old": "Platform dependence",
+      "next": "A shared record",
+      "caption": "The messenger disappeared. The message stayed.",
+      "was": "The platform kept the inbox, the address, and the proof that someone had spoken. When it vanished, an unopened letter outlasted the system built to deliver it.",
+      "became": "The envelope opens beyond the frame. A message chosen for the public record can travel without its original messenger. Its meaning belongs to those who encounter it, even when its token belongs to someone else.",
+      "file": "world-art/the-letter-that-stayed.webp",
+      "description": "The World That Was\nThe platform kept the inbox, the address, and the proof that someone had spoken. When it vanished, an unopened letter outlasted the system built to deliver it.\n\nThe World It Became\nThe envelope opens beyond the frame. A message chosen for the public record can travel without its original messenger. Its meaning belongs to those who encounter it, even when its token belongs to someone else.",
+      "attributes": [
+        {
+          "trait_type": "Theme",
+          "value": "Communication"
+        },
+        {
+          "trait_type": "Relic",
+          "value": "The letter"
+        },
+        {
+          "trait_type": "Old World",
+          "value": "Platform dependence"
+        },
+        {
+          "trait_type": "New World",
+          "value": "A shared record"
+        },
+        {
+          "trait_type": "Material",
+          "value": "Textured paper · painted metal"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "the-square-beyond-the-feed",
+      "name": "The Square Beyond the Feed",
+      "theme": "Community",
+      "relic": "The screen",
+      "material": "Ivory architecture · terracotta · painted steel",
+      "old": "The feed",
+      "next": "The commons",
+      "caption": "A community is larger than its interface.",
+      "was": "A town once lived inside a feed, its streets rearranged by a ranking no one could see. When the screen went dark, the gathering place disappeared.",
+      "became": "The people build a square with many entrances. Paths continue beyond the screen. Its shared record can be read through any window someone chooses to make. The community is larger than the interface that reveals it.",
+      "file": "world-art/the-square-beyond-the-feed.webp",
+      "description": "The World That Was\nA town once lived inside a feed, its streets rearranged by a ranking no one could see. When the screen went dark, the gathering place disappeared.\n\nThe World It Became\nThe people build a square with many entrances. Paths continue beyond the screen. Its shared record can be read through any window someone chooses to make. The community is larger than the interface that reveals it.",
+      "attributes": [
+        {
+          "trait_type": "Theme",
+          "value": "Community"
+        },
+        {
+          "trait_type": "Relic",
+          "value": "The screen"
+        },
+        {
+          "trait_type": "Old World",
+          "value": "The feed"
+        },
+        {
+          "trait_type": "New World",
+          "value": "The commons"
+        },
+        {
+          "trait_type": "Material",
+          "value": "Ivory architecture · terracotta · painted steel"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "the-garden-of-copies",
+      "name": "The Garden of Copies",
+      "theme": "Continuity",
+      "relic": "The seed vault",
+      "material": "Painted steel · terracotta · living leaves",
+      "old": "One keeper",
+      "next": "Many copies",
+      "caption": "A memory survives by taking root elsewhere.",
+      "was": "The last seed was kept in a vault, safe until the day the keeper disappeared. A single protected copy had become a single fragile point of memory.",
+      "became": "The vault opens into a nursery. Each cutting carries the pattern onward, and new roots take hold beyond its walls. The token can belong to one wallet; the readable record can be held by many.",
+      "file": "world-art/the-garden-of-copies.webp",
+      "description": "The World That Was\nThe last seed was kept in a vault, safe until the day the keeper disappeared. A single protected copy had become a single fragile point of memory.\n\nThe World It Became\nThe vault opens into a nursery. Each cutting carries the pattern onward, and new roots take hold beyond its walls. The token can belong to one wallet; the readable record can be held by many.",
+      "attributes": [
+        {
+          "trait_type": "Theme",
+          "value": "Continuity"
+        },
+        {
+          "trait_type": "Relic",
+          "value": "The seed vault"
+        },
+        {
+          "trait_type": "Old World",
+          "value": "One keeper"
+        },
+        {
+          "trait_type": "New World",
+          "value": "Many copies"
+        },
+        {
+          "trait_type": "Material",
+          "value": "Painted steel · terracotta · living leaves"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "the-library-without-doors",
+      "name": "The Library Without Doors",
+      "theme": "Knowledge",
+      "relic": "The archive cabinet",
+      "material": "Painted steel · bound paper · ivory ceramic",
+      "old": "Closed shelves",
+      "next": "Shared knowledge",
+      "caption": "The old door became a place to read.",
+      "was": "The shelves were full, but access belonged to the institution. Its keys, subscriptions, and opening hours decided which stories could be read. When the keeper left, knowledge waited behind a locked door.",
+      "became": "The door is laid down and becomes a reading platform. Books leave the shelves. The record can be found, read, and carried forward by people the original keeper never knew.",
+      "file": "world-art/the-library-without-doors.webp",
+      "description": "The World That Was\nThe shelves were full, but access belonged to the institution. Its keys, subscriptions, and opening hours decided which stories could be read. When the keeper left, knowledge waited behind a locked door.\n\nThe World It Became\nThe door is laid down and becomes a reading platform. Books leave the shelves. The record can be found, read, and carried forward by people the original keeper never knew.",
+      "attributes": [
+        {
+          "trait_type": "Theme",
+          "value": "Knowledge"
+        },
+        {
+          "trait_type": "Relic",
+          "value": "The archive cabinet"
+        },
+        {
+          "trait_type": "Old World",
+          "value": "Closed shelves"
+        },
+        {
+          "trait_type": "New World",
+          "value": "Shared knowledge"
+        },
+        {
+          "trait_type": "Material",
+          "value": "Painted steel · bound paper · ivory ceramic"
+        }
+      ]
+    }
+  ]
+}
+

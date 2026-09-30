@@ -1,0 +1,32 @@
+{
+  "name": "The Ledger Outside",
+  "description": "The ledger was trusted because a powerful keeper said it was correct.\n\nThe pages can be inspected. A shared history invites verification beyond the keeper's claim.",
+  "image": "world-art/the-ledger-outside.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "e19e4800668040d66a02b04308aca21b568d7a18b053000bf0b4cd530d3719fa",
+    "mime_type": "image/webp",
+    "byte_length": 131424,
+    "artifact_id": 80,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

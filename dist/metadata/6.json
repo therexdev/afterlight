@@ -1,0 +1,40 @@
+{
+  "name": "The Library Without Doors",
+  "description": "The shelves were full, but access belonged to the institution. Its keys, subscriptions, and opening hours decided which stories could be read. When the keeper left, knowledge waited behind a locked door.\n\nThe door is laid down and becomes a reading platform. Books leave the shelves. The record can be found, read, and carried forward by people the original keeper never knew.",
+  "image": "world-art/the-library-without-doors.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "The archive cabinet"
+    },
+    {
+      "trait_type": "Old World",
+      "value": "Closed shelves"
+    },
+    {
+      "trait_type": "New World",
+      "value": "Shared knowledge"
+    },
+    {
+      "trait_type": "Material",
+      "value": "Painted steel · bound paper · ivory ceramic"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "5f4b3e288d730ec1aa8cc4287e8e68678d79abd3e363a028b82d60f4ad63620e",
+    "mime_type": "image/webp",
+    "byte_length": 109642,
+    "artifact_id": 6,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

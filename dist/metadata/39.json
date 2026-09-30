@@ -1,0 +1,32 @@
+{
+  "name": "The Common Socket",
+  "description": "Everyone depended on a connection owned by one provider.\n\nThe opening has become a well. Shared infrastructure matters because people can keep it useful together.",
+  "image": "world-art/the-common-socket.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "cc8935944f07c8d3c2901d85d45f02b7884725b69eb2587a6844415ba2b56469",
+    "mime_type": "image/webp",
+    "byte_length": 160160,
+    "artifact_id": 39,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Empty Badge Rack",
+  "description": "Identity was sorted into slots belonging to the organization.\n\nThe cards have left their compartments. People can gather without accepting the old arrangement.",
+  "image": "world-art/the-empty-badge-rack.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "df8968f44373ddbffcb6974c9c690c38a57dd08c7eabd9ef5756f5a1e3851c3b",
+    "mime_type": "image/webp",
+    "byte_length": 87592,
+    "artifact_id": 20,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

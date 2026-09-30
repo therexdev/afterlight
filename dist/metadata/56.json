@@ -1,0 +1,32 @@
+{
+  "name": "The Cabinet on Wheels",
+  "description": "The host made the archive feel fixed to an address.\n\nThe cabinet can move. The data can be recovered and served from somewhere its first owner never planned.",
+  "image": "world-art/the-cabinet-on-wheels.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "62b6327e5a8b8506662858857302075a063b8ff7da4c41935e94ff2469737a62",
+    "mime_type": "image/webp",
+    "byte_length": 121230,
+    "artifact_id": 56,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Box With Many Lids",
+  "description": "One lid controlled the only way into the box.\n\nSeveral openings now lead to the same contents. No single route has to remain indispensable.",
+  "image": "world-art/the-box-with-many-lids.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "3ad87ba440d1875be498ab3048d50e677e627039e5e8da54929e9746cbceac30",
+    "mime_type": "image/webp",
+    "byte_length": 151300,
+    "artifact_id": 57,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

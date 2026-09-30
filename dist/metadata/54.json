@@ -1,0 +1,32 @@
+{
+  "name": "The Disk Becomes a Pond",
+  "description": "A life was stored on a disk whose failure could make it disappear.\n\nThe empty mechanism holds water. Memory can persist when it is carried beyond a single device.",
+  "image": "world-art/the-disk-becomes-a-pond.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "d54be0ebff1b443786e897bc505844861e66cfcd3283f0b6191c4a4abe588108",
+    "mime_type": "image/webp",
+    "byte_length": 137074,
+    "artifact_id": 54,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

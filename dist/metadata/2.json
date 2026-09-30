@@ -1,0 +1,40 @@
+{
+  "name": "The Cloud Came Down",
+  "description": "They called it a cloud, though it lived behind someone else's doors. Photographs, promises, and entire histories waited inside machines their makers would never see.\n\nThe cabinet opens. Its records are carried outward, each finding a place beyond the original enclosure. The old sign rests on the ground. No single door decides who can reach what remains.",
+  "image": "world-art/the-cloud-came-down.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "The server cabinet"
+    },
+    {
+      "trait_type": "Old World",
+      "value": "Enclosure"
+    },
+    {
+      "trait_type": "New World",
+      "value": "Distribution"
+    },
+    {
+      "trait_type": "Material",
+      "value": "Painted steel · ivory housings · frosted acrylic"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "c18a129c0e13f5441d2d731276cbd1a1523849f5a29b08fdf66b0dc88aa743d5",
+    "mime_type": "image/webp",
+    "byte_length": 120936,
+    "artifact_id": 2,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

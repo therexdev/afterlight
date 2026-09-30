@@ -1,0 +1,32 @@
+{
+  "name": "The Auction Bell at Rest",
+  "description": "The room gave the work attention only while bids were being called.\n\nThe bell is quiet and the work remains. Its public life can continue between owners.",
+  "image": "world-art/the-auction-bell-at-rest.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "0c4a64bc3dd223b161f3c96b1bc21a74f56886c01d8f26fe19db6a2954cfef2b",
+    "mime_type": "image/webp",
+    "byte_length": 162326,
+    "artifact_id": 81,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

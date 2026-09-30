@@ -1,0 +1,32 @@
+{
+  "name": "The Switchboard Quiet",
+  "description": "Every conversation crossed a board controlled by somebody else.\n\nThe loose lines now connect neighbors directly. The exchange can fall silent without silencing them.",
+  "image": "world-art/the-switchboard-quiet.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "551cd9e537ba7eee09c5a4bd6e52def085b5cb46ea3485886b5b1e702778fc2a",
+    "mime_type": "image/webp",
+    "byte_length": 141662,
+    "artifact_id": 24,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

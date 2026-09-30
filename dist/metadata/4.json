@@ -1,0 +1,40 @@
+{
+  "name": "The Square Beyond the Feed",
+  "description": "A town once lived inside a feed, its streets rearranged by a ranking no one could see. When the screen went dark, the gathering place disappeared.\n\nThe people build a square with many entrances. Paths continue beyond the screen. Its shared record can be read through any window someone chooses to make. The community is larger than the interface that reveals it.",
+  "image": "world-art/the-square-beyond-the-feed.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "The screen"
+    },
+    {
+      "trait_type": "Old World",
+      "value": "The feed"
+    },
+    {
+      "trait_type": "New World",
+      "value": "The commons"
+    },
+    {
+      "trait_type": "Material",
+      "value": "Ivory architecture · terracotta · painted steel"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "73503de9b89073f4dbe1b0c3966afdb4537803f80de18055af930ab0924c81e9",
+    "mime_type": "image/webp",
+    "byte_length": 168112,
+    "artifact_id": 4,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

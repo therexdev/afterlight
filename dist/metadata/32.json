@@ -1,0 +1,32 @@
+{
+  "name": "The Message Bench",
+  "description": "A message waited in a slot for the right person to arrive.\n\nThe slot has become a place to meet. The record invites another encounter.",
+  "image": "world-art/the-message-bench.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "8590b35e28cd08d003122cce7a74eadf30612a6c3dfe93cc9fe942fc27ede76f",
+    "mime_type": "image/webp",
+    "byte_length": 144696,
+    "artifact_id": 32,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

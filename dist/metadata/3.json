@@ -1,0 +1,40 @@
+{
+  "name": "The Letter That Stayed",
+  "description": "The platform kept the inbox, the address, and the proof that someone had spoken. When it vanished, an unopened letter outlasted the system built to deliver it.\n\nThe envelope opens beyond the frame. A message chosen for the public record can travel without its original messenger. Its meaning belongs to those who encounter it, even when its token belongs to someone else.",
+  "image": "world-art/the-letter-that-stayed.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "The letter"
+    },
+    {
+      "trait_type": "Old World",
+      "value": "Platform dependence"
+    },
+    {
+      "trait_type": "New World",
+      "value": "A shared record"
+    },
+    {
+      "trait_type": "Material",
+      "value": "Textured paper · painted metal"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "51c0a59b7f32220b2a183e84ff1b20d93bf4e1289462a7a1fff963f3b02d2ca7",
+    "mime_type": "image/webp",
+    "byte_length": 104880,
+    "artifact_id": 3,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Long Return",
+  "description": "Records returned to the archive and vanished from public reach.\n\nThe chute leads back to the table. Preservation can be a route toward another encounter.",
+  "image": "world-art/the-long-return.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "2d4a57f6dc3ba8131332ba15e87328b5acbf0599044f0afebf3beba322433dbe",
+    "mime_type": "image/webp",
+    "byte_length": 130612,
+    "artifact_id": 72,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

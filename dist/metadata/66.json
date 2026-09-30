@@ -1,0 +1,32 @@
+{
+  "name": "The Queue Dissolved",
+  "description": "The queue made access depend on the order assigned by a machine.\n\nThe roll forms a circle. The record is there whenever a reader is ready.",
+  "image": "world-art/the-queue-dissolved.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "b17e984dfd41606b48c4cb515974d89ab92be59f2d058e57f8d8b1b39e364cb1",
+    "mime_type": "image/webp",
+    "byte_length": 94546,
+    "artifact_id": 66,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

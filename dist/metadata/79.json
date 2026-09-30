@@ -1,0 +1,32 @@
+{
+  "name": "The Coin Slot Window",
+  "description": "The slot admitted value before it admitted a visitor.\n\nThe opening has become a window. The record can be seen without feeding the old mechanism.",
+  "image": "world-art/the-coin-slot-window.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "c4e25bb7857ad48f08dc00ca23c7e60991ff480a6645a000dab46d249a902b95",
+    "mime_type": "image/webp",
+    "byte_length": 157220,
+    "artifact_id": 79,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

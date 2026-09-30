@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {transactionIntent,verifySignedTransaction} from '../src/transaction-guard.js';
+const tx={id:'expected-id',header:{chain_id:'chain',payer:'buyer',rc_limit:'100',nonce:'2'},operations:[{call_contract:{contract_id:'collection',entry_point:1,args:'requested-action'}}]};
+test('wallet response preserves the exact action, payer, network, nonce, and Mana cap',()=>{const signed={...structuredClone(tx),signatures:['signature']};assert.doesNotThrow(()=>verifySignedTransaction(signed,transactionIntent(tx),tx.id));for(const [key,value]of Object.entries({chain_id:'other',payer:'attacker',rc_limit:'1000000',nonce:'3'})){const changed=structuredClone(signed);changed.header[key]=value;assert.throws(()=>verifySignedTransaction(changed,transactionIntent(tx),tx.id));}});
+test('reject additional operations, changed arguments, missing signatures, and a changed transaction ID',()=>{for(const mutate of [x=>x.operations.push(x.operations[0]),x=>x.operations[0].call_contract.args='other',x=>x.signatures=[],x=>x.id='other']){const signed={...structuredClone(tx),signatures:['signature']};mutate(signed);assert.throws(()=>verifySignedTransaction(signed,transactionIntent(tx),tx.id));}});
+test('harmless object key ordering does not reject a valid signature response',()=>{const signed={operations:tx.operations,header:{nonce:'2',rc_limit:'100',payer:'buyer',chain_id:'chain'},id:tx.id,signatures:['signature']};assert.doesNotThrow(()=>verifySignedTransaction(signed,transactionIntent(tx),tx.id));});

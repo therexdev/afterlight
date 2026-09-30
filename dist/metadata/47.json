@@ -1,0 +1,32 @@
+{
+  "name": "The Book Through the Slot",
+  "description": "The institution controlled both the shelves and the route back to them.\n\nThe book can pass through the slot in either direction. Access need not be a one-way promise.",
+  "image": "world-art/the-book-through-the-slot.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "987359851ff697514456e524c56de5ae08f433f94d7ed1740e41df6b6384f2df",
+    "mime_type": "image/webp",
+    "byte_length": 125140,
+    "artifact_id": 47,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

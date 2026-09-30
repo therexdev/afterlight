@@ -1,0 +1,32 @@
+{
+  "name": "The Cold Room Thawed",
+  "description": "The cold room preserved records by keeping people out.\n\nIts door is open and something is growing. Preservation can make room for use as well as survival.",
+  "image": "world-art/the-cold-room-thawed.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "eeefb84eb3b533bd67c83ede9ae01de4a8c17a868c43b835138fc21e31766fe7",
+    "mime_type": "image/webp",
+    "byte_length": 126900,
+    "artifact_id": 63,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

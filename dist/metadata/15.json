@@ -1,0 +1,32 @@
+{
+  "name": "An Address That Remained",
+  "description": "A platform gave each person an address and could take it away.\n\nThe messages can outlive the address that first received them, carried into places their sender never rented.",
+  "image": "world-art/an-address-that-remained.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "ac2a589e90258d1af9c31e4c032fe59e06236eb8d4db7f8139c4c9718e56408d",
+    "mime_type": "image/webp",
+    "byte_length": 95716,
+    "artifact_id": 15,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

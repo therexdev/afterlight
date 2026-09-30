@@ -1,0 +1,32 @@
+{
+  "name": "The Carrying Case",
+  "description": "A digital home was useful only while its host recognized the tenant.\n\nThe case is open for travel. Belonging can continue when an address changes.",
+  "image": "world-art/the-carrying-case.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "d112794c4f1ba0c10633c3cf8e3946137b1394d5d3eaf91cbdb6b471f872c6e5",
+    "mime_type": "image/webp",
+    "byte_length": 156288,
+    "artifact_id": 22,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

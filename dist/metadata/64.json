@@ -1,0 +1,32 @@
+{
+  "name": "The Clock Without an Office",
+  "description": "The office decided when the record could be reached.\n\nThe clock no longer sets opening hours. A public record can wait for whoever needs it next.",
+  "image": "world-art/the-clock-without-an-office.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "22de85807edf48bcecf8b90c903590e708a1647eb240e05085029fe3b8e01fdf",
+    "mime_type": "image/webp",
+    "byte_length": 142082,
+    "artifact_id": 64,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

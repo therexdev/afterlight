@@ -1,0 +1,32 @@
+{
+  "name": "The Archive in the Open",
+  "description": "The archive claimed safety by keeping its contents inside.\n\nThe sides are open. Other people can protect the record by reading it, copying it, and keeping it elsewhere.",
+  "image": "world-art/the-archive-in-the-open.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "11b5bd0fd820c2f57c46852a40ae50c3d57d46c4173a375f1e665de2bfddb2e3",
+    "mime_type": "image/webp",
+    "byte_length": 133818,
+    "artifact_id": 96,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

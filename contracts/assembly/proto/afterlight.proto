@@ -1,0 +1,307 @@
+syntax = "proto3";
+package afterlight;
+import "koinos/options.proto";
+message royalty { uint64 percentage=1; bytes address = 2 [(koinos.btype) = ADDRESS]; }
+message artifact { uint32 artifact_id=1; string name=2; string mime=3; uint32 byte_length=4; bytes sha256 = 5 [(koinos.btype) = HEX]; string metadata=6; uint32 chunks=7; uint32 uploaded=8; bool finalized=9; }
+message token_record { bytes owner = 1 [(koinos.btype) = ADDRESS]; bytes approved = 2 [(koinos.btype) = ADDRESS]; uint64 revision=3; }
+message number_record { uint64 value=1; }
+message bool_record { bool value=1; }
+message chunk_record { bytes value=1; }
+message operator_list { repeated bytes values=1; }
+message configuration { bytes archive = 1 [(koinos.btype) = ADDRESS]; bytes treasury = 2 [(koinos.btype) = ADDRESS]; bytes payment_token = 3 [(koinos.btype) = ADDRESS]; string base_uri=4; bool launched=5; bool paused=6; }
+message listing { bytes seller = 1 [(koinos.btype) = ADDRESS]; uint64 price=2; uint64 revision=3; uint64 expires_at=4; bool primary=5; bool active=6; }
+message token_view { bytes token_id = 1 [(koinos.btype) = HEX]; bytes owner = 2 [(koinos.btype) = ADDRESS]; listing sale=3; }
+message mint_event { bytes to = 1 [(koinos.btype) = ADDRESS]; bytes token_id = 2 [(koinos.btype) = HEX]; }
+message transfer_event { bytes from = 1 [(koinos.btype) = ADDRESS]; bytes to = 2 [(koinos.btype) = ADDRESS]; bytes token_id = 3 [(koinos.btype) = HEX]; }
+message token_approval_event { bytes approver_address = 1 [(koinos.btype) = ADDRESS]; bytes to = 2 [(koinos.btype) = ADDRESS]; bytes token_id = 3 [(koinos.btype) = HEX]; }
+message operator_approval_event { bytes approver_address = 1 [(koinos.btype) = ADDRESS]; bytes operator_address = 2 [(koinos.btype) = ADDRESS]; bool approved=3; }
+message sale_event { bytes token_id = 1 [(koinos.btype) = HEX]; bytes seller = 2 [(koinos.btype) = ADDRESS]; bytes buyer = 3 [(koinos.btype) = ADDRESS]; uint64 price=4; bool primary=5; uint64 revision=6; }
+message listing_event { bytes token_id = 1 [(koinos.btype) = HEX]; listing sale=2; }
+
+// @read-only true
+message get_status_arguments {
+
+}
+message get_status_result {
+  uint32 minted = 1;
+  bool sealed = 2;
+  uint32 supply_cap = 3;
+  uint32 chunk_bytes = 4;
+  uint32 max_artifact_bytes = 5;
+}
+
+// @read-only true
+message get_artifact_arguments {
+  uint32 artifact_id = 1;
+}
+message get_artifact_result {
+  artifact value = 1;
+}
+
+// @read-only true
+message get_chunk_arguments {
+  uint32 artifact_id = 1;
+  uint32 index = 2;
+}
+message get_chunk_result {
+  bytes value = 1;
+}
+
+// @read-only false
+message begin_artifact_arguments {
+  uint32 artifact_id = 1;
+  string name = 2;
+  string mime = 3;
+  uint32 byte_length = 4;
+  bytes sha256 = 5 [(koinos.btype) = HEX];
+  string metadata = 6;
+}
+message begin_artifact_result {
+
+}
+
+// @read-only false
+message upload_chunk_arguments {
+  uint32 artifact_id = 1;
+  uint32 index = 2;
+  bytes data = 3;
+}
+message upload_chunk_result {
+
+}
+
+// @read-only false
+message finalize_artifact_arguments {
+  uint32 artifact_id = 1;
+}
+message finalize_artifact_result {
+
+}
+
+// @read-only false
+message seal_archive_arguments {
+
+}
+message seal_archive_result {
+
+}
+
+// @read-only true
+message name_arguments {
+
+}
+message name_result {
+  string value = 1;
+}
+
+// @read-only true
+message symbol_arguments {
+
+}
+message symbol_result {
+  string value = 1;
+}
+
+// @read-only true
+message uri_arguments {
+
+}
+message uri_result {
+  string value = 1;
+}
+
+// @read-only true
+message token_uri_arguments {
+  bytes token_id = 1 [(koinos.btype) = HEX];
+}
+message token_uri_result {
+  string value = 1;
+}
+
+// @read-only true
+message owner_arguments {
+
+}
+message owner_result {
+  bytes value = 1 [(koinos.btype) = ADDRESS];
+}
+
+// @read-only true
+message total_supply_arguments {
+
+}
+message total_supply_result {
+  uint64 value = 1;
+}
+
+// @read-only true
+message balance_of_arguments {
+  bytes owner = 1 [(koinos.btype) = ADDRESS];
+}
+message balance_of_result {
+  uint64 value = 1;
+}
+
+// @read-only true
+message owner_of_arguments {
+  bytes token_id = 1 [(koinos.btype) = HEX];
+}
+message owner_of_result {
+  bytes value = 1 [(koinos.btype) = ADDRESS];
+}
+
+// @read-only true
+message get_approved_arguments {
+  bytes token_id = 1 [(koinos.btype) = HEX];
+}
+message get_approved_result {
+  bytes value = 1 [(koinos.btype) = ADDRESS];
+}
+
+// @read-only true
+message is_approved_for_all_arguments {
+  bytes owner = 1 [(koinos.btype) = ADDRESS];
+  bytes operator = 2 [(koinos.btype) = ADDRESS];
+}
+message is_approved_for_all_result {
+  bool value = 1;
+}
+
+// @read-only true
+message royalties_arguments {
+
+}
+message royalties_result {
+  repeated royalty value = 1;
+}
+
+// @read-only true
+message get_config_arguments {
+
+}
+message get_config_result {
+  configuration value = 1;
+}
+
+// @read-only true
+message get_metadata_arguments {
+  bytes token_id = 1 [(koinos.btype) = HEX];
+}
+message get_metadata_result {
+  string value = 1;
+}
+
+// @read-only true
+message get_listing_arguments {
+  bytes token_id = 1 [(koinos.btype) = HEX];
+}
+message get_listing_result {
+  listing value = 1;
+}
+
+// @read-only true
+message get_tokens_arguments {
+  uint32 start = 1;
+  uint32 limit = 2;
+}
+message get_tokens_result {
+  repeated token_view values = 1;
+}
+
+// @read-only false
+message initialize_arguments {
+  bytes archive = 1 [(koinos.btype) = ADDRESS];
+  bytes treasury = 2 [(koinos.btype) = ADDRESS];
+  bytes payment_token = 3 [(koinos.btype) = ADDRESS];
+  string base_uri = 4;
+}
+message initialize_result {
+
+}
+
+// @read-only false
+message mint_arguments {
+  bytes token_id = 1 [(koinos.btype) = HEX];
+}
+message mint_result {
+
+}
+
+// @read-only false
+message open_sales_arguments {
+
+}
+message open_sales_result {
+
+}
+
+// @read-only false
+message set_paused_arguments {
+  bool paused = 1;
+}
+message set_paused_result {
+
+}
+
+// @read-only false
+message transfer_arguments {
+  bytes from = 1 [(koinos.btype) = ADDRESS];
+  bytes to = 2 [(koinos.btype) = ADDRESS];
+  bytes token_id = 3 [(koinos.btype) = HEX];
+}
+message transfer_result {
+
+}
+
+// @read-only false
+message approve_arguments {
+  bytes approver_address = 1 [(koinos.btype) = ADDRESS];
+  bytes to = 2 [(koinos.btype) = ADDRESS];
+  bytes token_id = 3 [(koinos.btype) = HEX];
+}
+message approve_result {
+
+}
+
+// @read-only false
+message set_approval_for_all_arguments {
+  bytes approver_address = 1 [(koinos.btype) = ADDRESS];
+  bytes operator_address = 2 [(koinos.btype) = ADDRESS];
+  bool approved = 3;
+}
+message set_approval_for_all_result {
+
+}
+
+// @read-only false
+message list_token_arguments {
+  bytes seller = 1 [(koinos.btype) = ADDRESS];
+  bytes token_id = 2 [(koinos.btype) = HEX];
+  uint64 price = 3;
+  uint64 expires_at = 4;
+}
+message list_token_result {
+
+}
+
+// @read-only false
+message cancel_listing_arguments {
+  bytes seller = 1 [(koinos.btype) = ADDRESS];
+  bytes token_id = 2 [(koinos.btype) = HEX];
+}
+message cancel_listing_result {
+
+}
+
+// @read-only false
+message buy_arguments {
+  bytes buyer = 1 [(koinos.btype) = ADDRESS];
+  bytes token_id = 2 [(koinos.btype) = HEX];
+  bytes expected_seller = 3 [(koinos.btype) = ADDRESS];
+  uint64 expected_price = 4;
+  uint64 expected_revision = 5;
+  uint64 deadline = 6;
+}
+message buy_result {
+
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Shelf Beyond the Wall",
+  "description": "Knowledge was visible from outside but reachable only through a subscription.\n\nThe shelf passes through the frame. Reading can continue beyond the boundary that once sold access.",
+  "image": "world-art/the-shelf-beyond-the-wall.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "797e5bbbf557fef7a7461de3cc7a1875155cf4c2636e857c254d51297e66bda3",
+    "mime_type": "image/webp",
+    "byte_length": 111512,
+    "artifact_id": 44,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

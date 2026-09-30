@@ -1,0 +1,32 @@
+{
+  "name": "The Calendar Fold",
+  "description": "The service measured belonging in renewals and expiry dates.\n\nThe pages become steps. What was made can outlast the payment period that hosted it.",
+  "image": "world-art/the-calendar-fold.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "290e545eae3c7dec84ca7647ace1f99114609c359192df8ea322bb7bccf22581",
+    "mime_type": "image/webp",
+    "byte_length": 118832,
+    "artifact_id": 67,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

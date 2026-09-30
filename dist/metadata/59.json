@@ -1,0 +1,32 @@
+{
+  "name": "The Backup Stool",
+  "description": "Backups waited unseen for the day the original failed.\n\nThe spare copies now support a seat. Redundancy is useful long before disaster makes it visible.",
+  "image": "world-art/the-backup-stool.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "824d35c5902a82deda9f208c7286440b19496643ee502c5f52bde53e0d77e160",
+    "mime_type": "image/webp",
+    "byte_length": 126454,
+    "artifact_id": 59,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

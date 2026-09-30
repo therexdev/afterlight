@@ -1,0 +1,32 @@
+{
+  "name": "A Door for Nobody",
+  "description": "The door separated those with permission from those still waiting.\n\nLaid on its side, it has become a table with room on every edge.",
+  "image": "world-art/a-door-for-nobody.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Access"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "db8f3e155956a345e29bb6a38ec3ff2027974f99aff6da51476961efc93a1e50",
+    "mime_type": "image/webp",
+    "byte_length": 87772,
+    "artifact_id": 9,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

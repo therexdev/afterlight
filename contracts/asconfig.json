@@ -1,0 +1,1 @@
+{"targets":{"release":{"outFile":"build/afterlight.wasm","optimizeLevel":3,"shrinkLevel":1,"noAssert":false},"debug":{"outFile":"build/debug.wasm","debug":true}},"options":{}}

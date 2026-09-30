@@ -1,0 +1,32 @@
+{
+  "name": "The Table From the Wall",
+  "description": "The walls divided a shared conversation into private channels.\n\nThe panels now meet at a table. What separated people can support their gathering.",
+  "image": "world-art/the-table-from-the-wall.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "0a64286c46ae770e9215a31dc1d8a9062e113ad7624108c3ac8d8daf88f0ead1",
+    "mime_type": "image/webp",
+    "byte_length": 102634,
+    "artifact_id": 40,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

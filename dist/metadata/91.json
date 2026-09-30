@@ -1,0 +1,32 @@
+{
+  "name": "The Repair Is the Record",
+  "description": "The archive tried to hide the fact that anything had ever changed.\n\nThe repair stays visible. A history is more useful when its changes can be examined.",
+  "image": "world-art/the-repair-is-the-record.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Repair"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "a73515f35eac43efa64140eb4eaaaaa398f8e73f632499ab4eb10ce6e4b47d19",
+    "mime_type": "image/webp",
+    "byte_length": 143172,
+    "artifact_id": 91,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

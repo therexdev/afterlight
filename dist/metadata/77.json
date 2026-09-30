@@ -1,0 +1,32 @@
+{
+  "name": "The Counterweight",
+  "description": "The platform weighed participation according to its own business.\n\nThe balance invites a different measure: what the record gives people who never owned the platform.",
+  "image": "world-art/the-counterweight.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "d3dc419b2ed848b97fa5a125f803d4f3bf5b6d9438e584a8d9c1bd0a114f64b2",
+    "mime_type": "image/webp",
+    "byte_length": 129220,
+    "artifact_id": 77,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

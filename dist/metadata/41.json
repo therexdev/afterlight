@@ -1,0 +1,32 @@
+{
+  "name": "The Courtyard in the Rack",
+  "description": "The rack hosted a community without giving it a place of its own.\n\nA courtyard now occupies the frame. The people can recognize their gathering beyond its original host.",
+  "image": "world-art/the-courtyard-in-the-rack.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "305b039aaf9f44778ce51c52f86b18b583201b5718f770f0e275b5028a51b305",
+    "mime_type": "image/webp",
+    "byte_length": 191328,
+    "artifact_id": 41,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

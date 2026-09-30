@@ -1,0 +1,32 @@
+{
+  "name": "The Copies Take Root",
+  "description": "The archive once waited behind a single lock.\n\nSeveral copies now have places to grow. A record is harder to lose when more people can carry it.",
+  "image": "world-art/the-copies-take-root.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "752b45c98eef40558950e6b62943cb40b047fd59d04cfcb465d512c53e30853f",
+    "mime_type": "image/webp",
+    "byte_length": 153570,
+    "artifact_id": 93,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

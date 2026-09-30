@@ -1,0 +1,32 @@
+{
+  "name": "The Unreserved Seat",
+  "description": "Every seat came after a ticket, a ranking, and a wait.\n\nThe holder is gone. There is room for someone whose arrival was never predicted.",
+  "image": "world-art/the-unreserved-seat.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "772cdad25a3f5bdf6a97f9eec3b796de51579e9ee72996445def1a9973439784",
+    "mime_type": "image/webp",
+    "byte_length": 106172,
+    "artifact_id": 42,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Blackboard Washed Clean",
+  "description": "The lesson belonged to the room that presented it.\n\nThe board becomes a table for another lesson. Knowledge can be used outside the structure that taught it.",
+  "image": "world-art/the-blackboard-washed-clean.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "94b083ff6226e914d59ca0f72737d52ec9b821a44a48e0c2717ae05ff5030965",
+    "mime_type": "image/webp",
+    "byte_length": 94700,
+    "artifact_id": 48,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

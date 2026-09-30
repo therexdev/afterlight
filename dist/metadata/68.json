@@ -1,0 +1,32 @@
+{
+  "name": "The Waiting Room Window",
+  "description": "People waited for a service to return before they could reach their past.\n\nThe wall has an opening. Recovery can begin without waiting for the former host.",
+  "image": "world-art/the-waiting-room-window.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "d327dc0c0bbf2fa8440a81dee706a5e6abf16d8acb260c2ecede0a9adf84ca30",
+    "mime_type": "image/webp",
+    "byte_length": 143970,
+    "artifact_id": 68,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

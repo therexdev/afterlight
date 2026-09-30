@@ -1,0 +1,32 @@
+{
+  "name": "The Server Drawer Bridge",
+  "description": "The drawer moved only as far as its host allowed.\n\nFreed from the rails, it reaches somewhere new. The stored record can serve another place.",
+  "image": "world-art/the-server-drawer-bridge.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Storage"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "f728dd11e42c6fa4a82904a3d06b8da99b5798c4abe3b21021c1720c8b0596da",
+    "mime_type": "image/webp",
+    "byte_length": 131830,
+    "artifact_id": 61,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

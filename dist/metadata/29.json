@@ -1,0 +1,32 @@
+{
+  "name": "The Postbox Orchard",
+  "description": "The box held messages until a private route carried them onward.\n\nThe empty slots shelter new growth. What was entrusted to one route can take root in several places.",
+  "image": "world-art/the-postbox-orchard.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "6c0a7a4e5f32f22e94d07a250901a01d48a793eb79c7027852d23d232cd2edef",
+    "mime_type": "image/webp",
+    "byte_length": 140112,
+    "artifact_id": 29,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

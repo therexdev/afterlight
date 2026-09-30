@@ -1,0 +1,40 @@
+{
+  "name": "The Garden of Copies",
+  "description": "The last seed was kept in a vault, safe until the day the keeper disappeared. A single protected copy had become a single fragile point of memory.\n\nThe vault opens into a nursery. Each cutting carries the pattern onward, and new roots take hold beyond its walls. The token can belong to one wallet; the readable record can be held by many.",
+  "image": "world-art/the-garden-of-copies.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "The seed vault"
+    },
+    {
+      "trait_type": "Old World",
+      "value": "One keeper"
+    },
+    {
+      "trait_type": "New World",
+      "value": "Many copies"
+    },
+    {
+      "trait_type": "Material",
+      "value": "Painted steel · terracotta · living leaves"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "5f9e9b0c7862ee2371a43ae70931b660e31897b35053fc9af1c7af8ccf812bde",
+    "mime_type": "image/webp",
+    "byte_length": 193098,
+    "artifact_id": 5,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

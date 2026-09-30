@@ -1,0 +1,14 @@
+{
+  "networkLabel": "Koinos mainnet",
+  "chainId": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+  "rpcUrls": ["https://api.koinos.io"],
+  "paymentToken": "19GYjDBVXU7keLbYvMLazsGQn3GTWHjHkK",
+  "collectionId": null,
+  "archiveId": null,
+  "treasury": null,
+  "enabled": false,
+  "maxActionMana": "1000000000",
+  "explorer": "https://koinosblocks.com",
+  "archiveUpgradeable": false,
+  "collectionUpgradeable": true
+}

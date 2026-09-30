@@ -1,0 +1,32 @@
+{
+  "name": "The Lesson Outside",
+  "description": "Learning took place inside a room rented from a platform.\n\nThe desk has moved outside. The lesson can be rebuilt wherever another reader arrives.",
+  "image": "world-art/the-lesson-outside.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "a82d60b47113819a9a3f6d4bc4a79c31343c4a7cd6f5b350b9fb5ed2982ed572",
+    "mime_type": "image/webp",
+    "byte_length": 92464,
+    "artifact_id": 51,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

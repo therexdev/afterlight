@@ -1,0 +1,32 @@
+{
+  "name": "The Roof We Carried",
+  "description": "The platform promised a home while retaining the roof.\n\nThe roof can be carried in pieces. A community can rebuild shelter somewhere else.",
+  "image": "world-art/the-roof-we-carried.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "293820650eac3c708252c5d6a6f9d9f54b32240cef2790635c212d9114a51844",
+    "mime_type": "image/webp",
+    "byte_length": 131734,
+    "artifact_id": 43,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

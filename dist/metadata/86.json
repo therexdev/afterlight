@@ -1,0 +1,32 @@
+{
+  "name": "The Repaired Path",
+  "description": "The service treated a broken connection as the end of the route.\n\nThe repair is visible. Continuity can include the marks left by people who kept the path open.",
+  "image": "world-art/the-repaired-path.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Repair"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "3198ff9282c9c11e5b44c82e90362089ca4da55702f1578f077e21c39f98debd",
+    "mime_type": "image/webp",
+    "byte_length": 157298,
+    "artifact_id": 86,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

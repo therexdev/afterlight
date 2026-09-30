@@ -1,0 +1,32 @@
+{
+  "name": "The Reading Lamp",
+  "description": "The lamp was connected to a service that could end the reading.\n\nIts shade now admits daylight. The page does not need its original supplier to remain legible.",
+  "image": "world-art/the-reading-lamp.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "67a731ced02f69bb157082bd28ea66b82771c29357cc79394838f1c0632e5f59",
+    "mime_type": "image/webp",
+    "byte_length": 154488,
+    "artifact_id": 46,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Password Drawer",
+  "description": "The drawer held the clues needed to recover a life behind a login.\n\nThose clues have become steps. The record can be approached without reconstructing a lost identity.",
+  "image": "world-art/the-password-drawer.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Access"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "b917ecf1e547348ff4391f40f2d4c044e966309b214d87c01911c1fcbfee9ecd",
+    "mime_type": "image/webp",
+    "byte_length": 128932,
+    "artifact_id": 10,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

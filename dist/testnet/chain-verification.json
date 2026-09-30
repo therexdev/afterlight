@@ -1,0 +1,70 @@
+{
+  "verifiedAt": "2026-09-29T18:36:41.710Z",
+  "chainId": "EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==",
+  "contractId": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+  "reader": "dist/chain.js (same reader embedded in independent viewer)",
+  "status": {
+    "minted": 6,
+    "sealed": true,
+    "supply_cap": 6,
+    "chunk_bytes": 16384,
+    "max_artifact_bytes": 200000
+  },
+  "publicationMana": 73.45018782,
+  "transactionCount": 15,
+  "lastPublicationBlock": 8794819,
+  "lastIrreversibleBlockAtVerification": 8794848,
+  "allPublicationTransactionsIrreversible": true,
+  "artifacts": [
+    {
+      "id": 1,
+      "bytes": 144086,
+      "sha256": "5417145fc6ae33decf1e9ed53be76dc2de93b9fa9e6b6d4c0a9dbd6ef9236077",
+      "owner": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "bytes": 93586,
+      "sha256": "ce065923c1694d13c4974c6ba8223a29a42cc85897fa65fb78945f10dc463f90",
+      "owner": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "bytes": 131858,
+      "sha256": "75a6a89f342fd2202546c119fab1388a7aff98c94e126278d82a409ba1ca80d0",
+      "owner": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "bytes": 130480,
+      "sha256": "71cc585890b3f249498927531aa80af0afb972bec1d74c89574f357cfd357991",
+      "owner": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+      "verified": true
+    },
+    {
+      "id": 5,
+      "bytes": 119148,
+      "sha256": "fbd547e567b635c6141bc3019bc2d814724004cd0d52b4866fcc6e71a0983d48",
+      "owner": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+      "verified": true
+    },
+    {
+      "id": 6,
+      "bytes": 154394,
+      "sha256": "4bd745dd51ac41553ed804595541fb4ca356ce0445ddb97e73ce427f55ee2361",
+      "owner": "1CsLXtkZ78QXk1bLAyAxcyEGPDAHJELqb2",
+      "verified": true
+    },
+    {
+      "id": 7,
+      "bytes": 9170,
+      "sha256": "cfe2441c6542fc4142259fb8fd88a46752906c1dbb006c6149354bb5bbcb296f",
+      "owner": null,
+      "verified": true
+    }
+  ],
+  "finalityCheckedAt": "2026-09-29T18:38:13.239Z"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Last Server Is a Seat",
+  "description": "The tower was indispensable to the people whose lives it stored.\n\nThe server has become a seat. Their records can continue elsewhere while the machine finally rests.",
+  "image": "world-art/the-last-server-is-a-seat.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Continuity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "a58b3a3f776ad165f55a54baf5a3eb0acc13a314c6151e00170cdc7285e9c358",
+    "mime_type": "image/webp",
+    "byte_length": 139430,
+    "artifact_id": 99,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

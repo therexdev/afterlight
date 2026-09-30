@@ -1,0 +1,32 @@
+{
+  "name": "The Bell Without a Tower",
+  "description": "An announcement reached everyone only if the central tower agreed to ring.\n\nThe bell has come down to the square. Anyone nearby can decide what deserves to be heard.",
+  "image": "world-art/the-bell-without-a-tower.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "163d59cc194a7650eb24fe9705f9b2faa78723184051a24bd718780501c7993c",
+    "mime_type": "image/webp",
+    "byte_length": 153576,
+    "artifact_id": 27,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

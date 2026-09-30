@@ -1,0 +1,32 @@
+{
+  "name": "The Workshop Without a Sign",
+  "description": "Repair depended on an authorized shop and the right badge.\n\nThe workshop is open on every side. Anyone with the record and the skill can help rebuild a way to use it.",
+  "image": "world-art/the-workshop-without-a-sign.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Repair"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "a2eb61fa427d3d7f06746eaf099b8da5a774770cd6f6318e3d182dc575122414",
+    "mime_type": "image/webp",
+    "byte_length": 182212,
+    "artifact_id": 89,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

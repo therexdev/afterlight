@@ -1,0 +1,32 @@
+{
+  "name": "The Broken Meter",
+  "description": "The meter turned every moment of access into a charge.\n\nIts tray now supports a pause. Public readability can exist beside private token ownership.",
+  "image": "world-art/the-broken-meter.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "a9a24f19fb679fe72f018bdca83c10105e70a3c9f3fb0c93e4be3a5aaaf659f0",
+    "mime_type": "image/webp",
+    "byte_length": 147904,
+    "artifact_id": 73,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

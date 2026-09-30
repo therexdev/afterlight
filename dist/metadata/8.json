@@ -1,0 +1,32 @@
+{
+  "name": "The Turnstile at Rest",
+  "description": "The machine counted each person before deciding whether they belonged.\n\nIts arms now support a place to sit. The square can be entered without being counted.",
+  "image": "world-art/the-turnstile-at-rest.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Access"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "8666297e0cb2de671efd411f8472604f3468c09e587bdf476d4fda9094480262",
+    "mime_type": "image/webp",
+    "byte_length": 132554,
+    "artifact_id": 8,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Receiver on the Table",
+  "description": "The call existed while the service chose to carry it.\n\nThe receiver rests between two places. A connection can be rebuilt by the people at either end.",
+  "image": "world-art/the-receiver-on-the-table.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "c3ed1a0e7664cd65767f9d761ecafdb49edd4e0f390ffe4336ec3d148c75c3c8",
+    "mime_type": "image/webp",
+    "byte_length": 121924,
+    "artifact_id": 25,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

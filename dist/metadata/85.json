@@ -1,0 +1,32 @@
+{
+  "name": "The Hinge Remembers",
+  "description": "The hinge was hidden inside a door that no longer worked.\n\nIt still makes movement possible. A small surviving piece can help another world open.",
+  "image": "world-art/the-hinge-remembers.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Repair"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "7ae16b2babb0afd0b6c9368d668cc7f161c80e540579489d6f7471bf7eca488e",
+    "mime_type": "image/webp",
+    "byte_length": 147648,
+    "artifact_id": 85,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

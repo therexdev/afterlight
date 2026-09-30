@@ -1,0 +1,32 @@
+{
+  "name": "The Portrait Cabinet",
+  "description": "A profile became the platform's preferred version of a person.\n\nThe frames leave the cabinet. No single view needs to own the whole story.",
+  "image": "world-art/the-portrait-cabinet.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Identity"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "9a984abd6d27c592d622c8fdaf14a8e997e0008a3fdede41a0e07d1056080a4d",
+    "mime_type": "image/webp",
+    "byte_length": 135682,
+    "artifact_id": 23,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

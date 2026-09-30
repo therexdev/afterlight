@@ -1,0 +1,32 @@
+{
+  "name": "The Meeting After Closing",
+  "description": "The conversation ended whenever the host closed the room.\n\nThe room's pieces now make another meeting place. Its participants can carry the conversation forward.",
+  "image": "world-art/the-meeting-after-closing.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Community"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "2946152e33c03482dff47e8e9eaac863df6a41f093299e19b428491e2bdbdf6f",
+    "mime_type": "image/webp",
+    "byte_length": 137568,
+    "artifact_id": 38,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

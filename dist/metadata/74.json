@@ -1,0 +1,32 @@
+{
+  "name": "The Till Grows Quiet",
+  "description": "The register measured every exchange by what could be collected.\n\nThe compartments hold something shared. Value can include what remains useful without another payment.",
+  "image": "world-art/the-till-grows-quiet.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Value"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "f05a236a19aa635ad1d9be211204657299493d31e994b63990da5b9bc6f6ca2e",
+    "mime_type": "image/webp",
+    "byte_length": 178104,
+    "artifact_id": 74,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

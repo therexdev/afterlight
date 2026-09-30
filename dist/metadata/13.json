@@ -1,0 +1,32 @@
+{
+  "name": "No One at the Desk",
+  "description": "A stranger at a desk once decided who could pass.\n\nThe desk has parted. What it guarded can be reached without an introduction.",
+  "image": "world-art/no-one-at-the-desk.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Access"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "3f19ff324397068fd6459107c7912d3286cc69ba825b0f67951eb8c2c4865e19",
+    "mime_type": "image/webp",
+    "byte_length": 111840,
+    "artifact_id": 13,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

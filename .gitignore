@@ -1,0 +1,13 @@
+node_modules/
+.secrets/
+.env
+.env.*
+!.env.example
+*.log
+contracts/build/protoc-gen-as
+contracts/build/as-pect.asconfig.json
+contracts/build/*.wat
+contracts/build/*.wasm.map
+contracts/build/*.js
+contracts/build/*.d.ts
+artwork-originals/

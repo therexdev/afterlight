@@ -1,0 +1,32 @@
+{
+  "name": "After the Session Ended",
+  "description": "The session ended and the system forgot the visitor.\n\nThe keys still make a path. The work can remain available after the connection closes.",
+  "image": "world-art/after-the-session-ended.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Time"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "46f65d5db872921e67f019ed2dd94e2c15ceca934d5a92fe87a02e290a6e1c02",
+    "mime_type": "image/webp",
+    "byte_length": 107870,
+    "artifact_id": 71,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

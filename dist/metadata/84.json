@@ -1,0 +1,32 @@
+{
+  "name": "The Spare Parts Table",
+  "description": "The parts were waste after the original system failed.\n\nTogether they support another use. Open materials let a future builder decide what comes next.",
+  "image": "world-art/the-spare-parts-table.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Repair"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "baa4d02d2322fad148b47fa83e67d8b90bb720e8969ef5d29ac022499ac50ce3",
+    "mime_type": "image/webp",
+    "byte_length": 100656,
+    "artifact_id": 84,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

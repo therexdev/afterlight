@@ -1,0 +1,32 @@
+{
+  "name": "The Reel Passed On",
+  "description": "The recording was stranded when the machine that played it stopped.\n\nThe reel can be copied and carried. A voice need not share the fate of its first player.",
+  "image": "world-art/the-reel-passed-on.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Communication"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "13253f3a25fd97519b26137f723646ab6c00569cf5d9c1bbe5022c34a2bbdf06",
+    "mime_type": "image/webp",
+    "byte_length": 153076,
+    "artifact_id": 31,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}

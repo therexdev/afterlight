@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171a19">
+<meta name="description" content="The platforms went dark. The world remained. Explore AFTERLIGHT, an entirely on-chain art collection in the making.">
+<title>AFTERLIGHT — The World That Was</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171a19'/%3E%3Cpath d='m12 51 20-38 20 38M22 34h20' fill='none' stroke='%23ffffff' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="afterhours.css">
+<link rel="preload" href="scene/workshop.webp" as="image">
+<link rel="preload" href="fonts/lmsansdemicond10-regular.otf" as="font" type="font/otf" crossorigin>
+<script src="world-data.js" defer></script><script src="home-status.js" defer></script><script src="afterhours.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#collection">Skip to the artworks</a>
+<header class="site-nav"><a class="wordmark" href="#home" aria-label="Afterlight home">afterlight<span aria-hidden="true">.</span></a><nav aria-label="Main navigation"><a href="collect.html">Collection</a><a href="marketplace.html">Marketplace</a><a href="wallet.html">My works</a></nav></header>
+<main>
+<section class="arrival" id="home" aria-labelledby="arrival-title">
+<img class="workshop" src="scene/workshop.webp" alt="" width="1672" height="941" fetchpriority="high">
+<div class="arrival-shade" aria-hidden="true"></div>
+<div class="arrival-copy"><h1 id="arrival-title">THEY<br>TURNED<br>IT OFF.</h1><p>The world stayed.</p><a class="enter" href="#collection">Find what remains</a></div>
+<div class="arrival-foot"><p>The World That Was.<br>An art collection for what comes next.</p><p>The stories. The objects.<br>The things no server should own.</p></div>
+</section>
+<section class="collection-space" id="collection" aria-label="Explore the collection">
+<div class="collection-opening"><h2>Still here.</h2><p>Something familiar.<br>With a different future.</p><button id="all-works-open" class="underlined">See all works</button></div>
+<div class="work-stage" id="work-stage">
+<div class="object-space"><button id="object-open" class="object-button" aria-label="Open The Last Login"><img id="object-image" src="world-art/the-last-login.webp" alt="An ivory computer terminal opened into a terracotta path." width="1100" height="1100"><span class="object-invitation">Take a closer look</span></button></div>
+<div class="object-story" aria-live="polite" aria-atomic="false"><h3 id="object-title">The Last Login</h3><p class="object-caption" id="object-caption">The doorway outlasted the password.</p><div class="time-tabs" role="tablist" aria-label="Choose a chapter of the artwork story"><button id="then-tab" role="tab" aria-controls="story-text" aria-selected="true">The world that was</button><button id="now-tab" role="tab" aria-controls="story-text" aria-selected="false" tabindex="-1">What it became</button></div><p class="story-text" id="story-text" role="tabpanel" aria-labelledby="then-tab"></p><button class="story-open" id="story-open">Open this work</button></div>
+</div>
+<div class="work-selector"><button id="previous-work" class="step-button">Previous</button><div id="work-thumbnails" class="work-thumbnails" aria-label="Choose an artwork"></div><button id="next-work" class="step-button">Next</button></div>
+<noscript><p class="no-js">Enable JavaScript to explore the six artworks and their stories. The <a href="testnet/">original testnet experiment</a> is also available.</p></noscript>
+</section>
+<section class="idea-space" id="idea" aria-labelledby="idea-title">
+<div class="idea-headline"><h2 id="idea-title">THIS WEBSITE<br>CAN DISAPPEAR.</h2><p>The art shouldn't.</p></div>
+<div class="idea-copy"><p>We left our lives in places we didn't own. Our photographs in a cloud. Our conversations in an inbox. Our communities inside a feed.</p><p>AFTERLIGHT imagines the doors opening. A screen becomes a passage. A vault becomes a garden. A locked cabinet becomes a place to read.</p><p>We're making the collection so the image and its story live on Koinos itself. The owner holds the token. Anyone can read the artwork's data and build another way to see it.</p><a class="underlined" href="testnet/">See the working on-chain experiment</a></div>
+</section>
+<section class="closing"><p>Keep a piece of the world.</p><button data-collect>Collect AFTERLIGHT</button><span>100 artworks. Initial listings planned at 500 KOIN each.<br>The collection is in preparation. Sales are not open yet.</span></section>
+</main>
+<footer><a class="wordmark" href="#home">afterlight<span aria-hidden="true">.</span></a><p>The World That Was.</p><a href="network.html">Network &amp; contracts</a><a href="recover.html">Independent reader</a></footer>
+<dialog class="work-dialog" id="work-dialog" aria-labelledby="detail-title"><button class="dialog-close" data-close aria-label="Close artwork">Close <span aria-hidden="true">×</span></button><div class="full-work"><div class="full-image"><img id="detail-image" alt="" width="1100" height="1100"></div><div class="full-story"><h2 id="detail-title"></h2><p class="full-caption" id="detail-caption"></p><h3>The world that was</h3><p id="detail-was"></p><h3>What it became</h3><p id="detail-became"></p><details class="trait-details"><summary>Materials &amp; traits</summary><dl id="detail-traits"></dl></details><div class="work-purchase"><strong>500 KOIN</strong><p>Planned initial listing.<br>This work has not been minted yet.</p></div><div class="downloads"><a id="download-work" download>Download artwork</a><button id="download-metadata">Download metadata</button></div></div></div><div class="dialog-paging"><button id="detail-previous">Previous work</button><button id="detail-next">Next work</button></div></dialog>
+<dialog class="all-works-dialog" id="all-works-dialog" aria-labelledby="all-works-title"><button class="dialog-close" data-close aria-label="Close all works">Close <span aria-hidden="true">×</span></button><h2 id="all-works-title">The things we kept.</h2><div id="all-works-grid"></div></dialog>
+<dialog class="collect-dialog" id="collect-dialog" aria-labelledby="collect-title"><button class="dialog-close" data-close aria-label="Close collecting details">Close <span aria-hidden="true">×</span></button><h2 id="collect-title">A world<br>worth keeping.</h2><p>AFTERLIGHT will be a collection of 100 individual NFTs, initially listed at 500 KOIN each.</p><p>The full collection is prepared. Mainnet deployment and the opening of sales are the final launch steps.</p><div class="sale-state">Sales aren't open yet.</div><p>The image and metadata are intended to be stored entirely on Koinos. You can try the original testnet collection's independent reader now.</p><a class="underlined" href="testnet/">Explore the on-chain experiment</a></dialog>
+<div class="sr-only" id="download-status" role="status"></div>
+</body></html>

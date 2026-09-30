@@ -1,0 +1,32 @@
+{
+  "name": "The Margins Remain",
+  "description": "The official page left little space for another interpretation.\n\nThe margins have become places to stand. The same record can support readings its first publisher did not anticipate.",
+  "image": "world-art/the-margins-remain.webp",
+  "attributes": [
+    {
+      "trait_type": "Theme",
+      "value": "Knowledge"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "AI-generated sculptural still life"
+    },
+    {
+      "trait_type": "Materials",
+      "value": "Aged ivory, painted steel, terracotta"
+    }
+  ],
+  "properties": {
+    "collection": "AFTERLIGHT: The World That Was",
+    "edition_size": 100,
+    "sha256": "fd68bfdd973fe1517351f675846585d18feeacb459839e3c82d056c6cff5f2c3",
+    "mime_type": "image/webp",
+    "byte_length": 145644,
+    "artifact_id": 53,
+    "storage": "Koinos contract state",
+    "archive_contract": null,
+    "chain_id": "EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==",
+    "generation": "AI-generated artwork",
+    "status": "Prepared; not yet deployed"
+  }
+}
