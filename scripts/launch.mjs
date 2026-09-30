@@ -60,6 +60,9 @@ if(command!=='verify'){
  const keys=json(walletPath);if(keys.chainId!==cfg.chainId)throw Error('Wallet backup belongs to another network.');
  signers=Object.fromEntries(['funding','archive','collection'].map(role=>{const signer=Signer.fromWif(keys[role].wif);signer.provider=p;if(signer.address!==keys[role].address)throw Error('Wallet address mismatch.');return [role,signer];}));
  if(signers.archive.address!==cfg.archiveId||signers.collection.address!==cfg.collectionId||signers.funding.address!==journal.fundingAddress)throw Error('Signing keys do not match this launch.');
+ // Koilib requires a contract signer even for deploy({onlyOperation:true}).
+ // send() still signs the transaction with both the payer and the contract key.
+ archive.signer=signers.archive;market.signer=signers.collection;
  if(existsSync(pendingPath)){
   const pending=json(pendingPath);if(pending.chainId!==cfg.chainId)throw Error('Pending transaction is for another network.');
   const done=await confirm(pending.transaction.id);record(pending.label,pending.transaction.id,done);unlinkSync(pendingPath);

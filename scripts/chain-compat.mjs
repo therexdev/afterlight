@@ -28,7 +28,9 @@ export async function deploymentMetadata(provider,chainId,account,archive,archiv
   catch(error){
     if(chainId!==TESTNET||!unsupportedSystemCall(error))throw error;
     if(archiveDeployed){
-      const {result}=await archive.functions.get_contract_info({account});
+    // A successful empty protobuf response means exists=false. Koilib exposes
+    // that as undefined when the ABI has no default_output; RPC failures still throw.
+    const {result={exists:false}}=await archive.functions.get_contract_info({account});
       if(!result)throw Error('The archive could not inspect deployed contract metadata.');
       return result.exists?{hash:result.code_hash,authorizes_upload_contract:result.authorizes_upload_contract,authorizes_call_contract:result.authorizes_call_contract,authorizes_transaction_application:result.authorizes_transaction_application}:undefined;
     }

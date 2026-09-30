@@ -6,7 +6,7 @@ Local validation completed on 2026-09-30. This repository remains a prelaunch bu
 | --- | --- |
 | Full contract, collection and website build | Passed |
 | Compiled AssemblyScript contract tests in Koinos MockVM | 54 / 54 passed |
-| Node tests: reader, ABI, amounts, launch preparation, transaction intent | 28 / 28 passed |
+| Node tests: reader, ABI, amounts, launch preparation, transaction intent, deployment CLI | 30 / 30 passed |
 | Unique final artworks | 100 images / 100 distinct hashes |
 | Largest final image | 196,036 bytes, below the 200,000-byte limit |
 | Total final image data | 13,763,010 bytes |
@@ -18,6 +18,8 @@ Local validation completed on 2026-09-30. This repository remains a prelaunch bu
 The contract suite covers initialization, authorization, immutable archive rules, SHA-256 checks, ordered chunks, the 100-token cap, launch completeness, approvals and transfers, exact sale prices, seller payment, stale quote rejection, listing cancellation and expiry, pausing, reentrancy, and failed-payment rollback of ownership and listings.
 
 The offline wallet-preparation test uses disposable local keys in a temporary directory. It verifies separate account roles, restricted key-file permissions, absence of keys in command output, metadata/reader address binding, and refusal to overwrite existing keys. It removes the fixture afterward and does not contact a blockchain.
+
+The deployment CLI regression test reproduces the reported `signer not found` failure with the original launcher. With the fix, it executes the actual launcher and Koilib deployment/serialization/signing code through both deployments and collection initialization against an offline RPC fixture. It checks both recovered transaction signers, bytecode, archive authority flags, simulation and adjusted Mana limits, confirmed receipt journaling, resume without redeployment or key changes, and verification without a wallet file. The fixture intentionally stops before artwork upload. It also exercises the legacy node's successful empty protobuf response for an unused contract address; transport errors still abort. This is not a funded testnet rehearsal.
 
 Browser review covered the full 100-work catalog, search, artwork detail, prelaunch sales state, owner marketplace empty state, wallet empty state, and recovery-reader configuration. The artwork was visually reviewed through four contact sheets. Preview images are in `docs/previews/`.
 

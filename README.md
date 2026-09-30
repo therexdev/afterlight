@@ -13,7 +13,7 @@ A 100-work art collection for Koinos, with images and stories stored on-chain, i
 - An immutable artwork archive and a separate upgradeable collection/marketplace contract, with corrected generated ABIs.
 - Initial listings at 500 KOIN; owner-priced resales, cancellation, transfer, and atomic KOIN payment. No added marketplace fee or resale royalty.
 - Resumable upload tooling, pre-broadcast resource simulation, complete on-chain readback verification, and a separate command to open sales.
-- 54 passing compiled-contract tests and 28 passing Node tests. GitHub Actions repeats the build and checks.
+- 54 passing compiled-contract tests and 30 passing Node tests. GitHub Actions repeats the build and checks.
 
 ## Run locally
 

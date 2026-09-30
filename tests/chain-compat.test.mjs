@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Serializer,utils} from 'koilib';
+import {Contract,utils} from 'koilib';
+import {readFileSync} from 'node:fs';
 import {resolveNativeKoin,deploymentMetadata,TESTNET_KOIN,TESTNET_NAME_SERVICE} from '../scripts/chain-compat.mjs';
 import {TESTNET,MAINNET} from '../scripts/launch-lib.mjs';
 const unsupported=async()=>{throw Error('Unable to translate request "unknown method"');};
@@ -26,4 +27,11 @@ test('the first legacy archive deployment rejects occupied and previously used a
   await assert.rejects(deploymentMetadata(provider,TESTNET,TESTNET_KOIN,null,false),/transaction history/);
   provider.getNonce=async()=>0;
   assert.equal(await deploymentMetadata(provider,TESTNET,TESTNET_KOIN,null,false),undefined);
+});
+test('a successful empty archive protobuf response means absent, while RPC errors remain errors',async()=>{
+  const provider={invokeGetContractMetadata:unsupported,readContract:async()=>({result:''})};
+  const archive=new Contract({id:TESTNET_KOIN,abi:JSON.parse(readFileSync('contracts/build/archive.abi')),provider});
+  assert.equal(await deploymentMetadata(provider,TESTNET,TESTNET_KOIN,archive,true),undefined);
+  provider.readContract=async()=>{throw Error('network timeout');};
+  await assert.rejects(deploymentMetadata(provider,TESTNET,TESTNET_KOIN,archive,true),/network timeout/);
 });
