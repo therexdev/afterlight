@@ -5,6 +5,7 @@ import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {Provider,Contract,Signer,Transaction,utils} from 'koilib';
 import {sha256} from '../../scripts/launch-lib.mjs';
 import {TESTNET_KOIN,TESTNET_NAME_SERVICE} from '../../scripts/chain-compat.mjs';
+import {bytecodeNetwork} from './bytecode-network.mjs';
 
 const json=path=>JSON.parse(readFileSync(path));
 const cfg=json('dist/network-config.json');
@@ -54,6 +55,8 @@ Provider.prototype.sendTransaction=async (transaction,broadcast)=>{
   assert.equal(tx.operations.length,1);
   const op=tx.operations[0];const owner=op.upload_contract?.contract_id||op.call_contract?.contract_id;
   assert.deepEqual((await Signer.recoverAddresses(tx)).sort(),[payer,owner].sort());
+  // Validate initialization using the shipped WASM, not a mocked acceptance.
+  if(op.call_contract)bytecodeNetwork(cfg.archiveId,cfg.collectionId).call(op.call_contract);
   const receipt={id:tx.id,rc_used:'1000000',reverted:false};
   if(!broadcast){state.simulations.push(tx);save();return {receipt};}
   const simulation=state.simulations.at(-1);

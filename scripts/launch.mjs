@@ -110,9 +110,13 @@ if(command==='upload'){
  validateAddress(payment);if(cfg.chainId===MAINNET&&payment!=='19GYjDBVXU7keLbYvMLazsGQn3GTWHjHkK')throw Error('Unexpected mainnet KOIN contract.');
  if(cfg.paymentToken!==payment){cfg.paymentToken=payment;atomicJSON(configPath,cfg);run('scripts/prepare-collection.mjs');run('scripts/build-utilities.mjs');}
  const artifacts=loadArtifacts();
+ // Empty strings are omitted by the ABI encoder and decode as null in the
+ // deployed contract. Use the same on-chain archive namespace as the images.
+ const baseUri=arg('base-uri')||'koinos://'+cfg.chainId+'/'+cfg.archiveId+'/artifacts';
+ if(Buffer.byteLength(baseUri,'utf8')>512)throw Error('The metadata base URI must be at most 512 UTF-8 bytes.');
  await verifyUpload('archive',archive,archiveAbi,true);await verifyUpload('collection',market,marketAbi,false);
  let settings=(await read(market,'get_config')).value;
- if(!settings){await write(market,'collection','initialize',{archive:cfg.archiveId,treasury:cfg.treasury,payment_token:cfg.paymentToken,base_uri:arg('base-uri')||''});settings=(await read(market,'get_config')).value;}
+ if(!settings){await write(market,'collection','initialize',{archive:cfg.archiveId,treasury:cfg.treasury,payment_token:cfg.paymentToken,base_uri:baseUri});settings=(await read(market,'get_config')).value;}
  if(settings.archive!==cfg.archiveId||settings.treasury!==cfg.treasury||settings.payment_token!==cfg.paymentToken)throw Error('Collection settings do not match the prepared launch.');
  let minted=Number((await read(market,'total_supply')).value||0);
  for(const art of artifacts){

@@ -46,7 +46,7 @@ npm run launch:upload -- --confirm-mainnet
 npm run launch:verify
 ```
 
-On testnet, omit `--confirm-mainnet`. You may add `--base-uri https://YOUR-SITE/metadata` to the first upload for legacy metadata mirror integrations. On-chain metadata and the recovery reader work independently of this optional URI. `AFTERLIGHT_RPC` can select another node, but its returned chain ID must match the prepared network. On managed/proxied hosts, `AFTERLIGHT_USE_CURL=1` enables the repository's bounded curl RPC transport.
+On testnet, omit `--confirm-mainnet`. The default collection URI points to `koinos://CHAIN-ID/ARCHIVE-ID/artifacts`; no website URL is needed. You may override it with `--base-uri https://YOUR-SITE/metadata` during initialization for legacy metadata mirror integrations (512 UTF-8 bytes maximum). Individual token metadata and the recovery reader work independently of this override. `AFTERLIGHT_RPC` can select another node, but its returned chain ID must match the prepared network. On managed/proxied hosts, `AFTERLIGHT_USE_CURL=1` enables the repository's bounded curl RPC transport.
 
 The uploader deploys both contracts with their complete, corrected ABIs, resolves the native KOIN contract, initializes the treasury and archive references, uploads files in small batches, checks each file by reading all its bytes back, mints 100 tokens into the initial sale pool, and seals the archive. It does **not** open sales.
 
