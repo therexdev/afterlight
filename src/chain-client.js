@@ -4,6 +4,7 @@ import collectionAbi from '../contracts/build/afterlight.abi' with {type:'json'}
 import archiveAbi from '../contracts/build/archive.abi' with {type:'json'};
 import {tokenId, parseTokenId} from './amounts.js';
 import {transactionIntent,verifySignedTransaction} from './transaction-guard.js';
+import {executionRejection,purchaseDeadline} from './transaction-status.js';
 
 export const MAINNET = 'EiBZK_GGVP0H_fXVAM3j6EAuz3-B-l3ejxRSewi7qIBfSA==';
 export const TESTNET = 'EiAIKVvm6-V2qmsmUvPJy09vCCLbtn9lHFpwrJbcTIEWRQ==';
@@ -17,11 +18,14 @@ const withTimeout = (promise, ms, message) => {
   return Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(Error(message)), ms); })]).finally(() => clearTimeout(timer));
 };
 export class ChainClient {
-  constructor(config) {
+  constructor(config, {provider, signerFor = getSigner, storage = globalThis.localStorage} = {}) {
     this.config = config;
-    this.provider = new Provider(config.rpcUrls);
+    this.provider = provider || new Provider(config.rpcUrls);
+    this.signerFor = signerFor;
+    this.storage = storage;
     this.collection = config.collectionId ? new Contract({id:address(config.collectionId), abi:collectionAbi, provider:this.provider}) : null;
     this.archive = config.archiveId ? new Contract({id:address(config.archiveId), abi:archiveAbi, provider:this.provider}) : null;
+    this.payment = new Contract({id:address(config.paymentToken), abi:utils.tokenAbi, provider:this.provider});
   }
   async network() {
     if (![MAINNET, TESTNET].includes(this.config.chainId)) throw Error('Unknown configured chain.');
@@ -65,7 +69,7 @@ export class ChainClient {
     if (!this.config.enabled || !this.collection) throw Error('Sales have not opened on this network.');
     if (!['buy','list_token','cancel_listing','transfer'].includes(method)) throw Error('Unsupported transaction.');
     address(owner); await this.network();
-    if (localStorage.getItem('afterlight.pending.' + this.config.chainId)) throw Error('An earlier transaction needs confirmation before another can be submitted.');
+    if (this.storage.getItem('afterlight.pending.' + this.config.chainId)) throw Error('An earlier transaction needs confirmation before another can be submitted.');
     const actor = method === 'buy' ? args.buyer : method === 'transfer' ? args.from : args.seller;
     if (actor !== owner) throw Error('The selected wallet does not match this action.');
     if (method === 'transfer') address(args.to);
@@ -73,29 +77,71 @@ export class ChainClient {
     const maxMana = BigInt(this.config.maxActionMana || '1000000000');
     const rcLimit = available < maxMana ? available : maxMana;
     if (rcLimit < 100000n) throw Error('This wallet needs KOIN with available Mana to submit the transaction.');
-    const signer = getSigner(owner, {provider:this.provider});
+    const signer = this.signerFor(owner, {provider:this.provider});
     const {operation} = await this.collection.functions[method](args, {onlyOperation:true});
     const tx = new Transaction({provider:this.provider, signer, options:{chainId:this.config.chainId, rcLimit:rcLimit.toString(), payer:owner}});
+    if (method === 'buy') {
+      // KOIN rejects a nested transfer from a normal wallet without an allowance.
+      // Approve exactly this quote, then consume it in the SAME atomic transaction.
+      // A failed purchase rolls back the approval too; no standing allowance remains.
+      const {operation: approval} = await this.payment.functions.approve({owner, spender:this.config.collectionId, value:args.expected_price}, {onlyOperation:true});
+      await tx.pushOperation(approval);
+    }
     await tx.pushOperation(operation); await tx.prepare();
     const intended = transactionIntent(tx.transaction), expectedId = tx.transaction.id;
     progress('Review and approve this transaction in Kondor.');
-    const signed = await withTimeout(signer.signTransaction(tx.transaction, {[this.config.collectionId]:collectionAbi}), 120000, 'Signing timed out. No transaction was broadcast by this site.');
+    const signed = await withTimeout(signer.signTransaction(tx.transaction, {[this.config.collectionId]:collectionAbi, [this.config.paymentToken]:utils.tokenAbi}), 120000, 'Signing timed out. No transaction was broadcast by this site.');
     verifySignedTransaction(signed, intended, expectedId);
     if (method === 'buy' && BigInt(args.deadline) <= BigInt(Date.now())) throw Error('The purchase quote expired while signing. Refresh and try again.');
-    const pending = {id:signed.id, account:owner, method, createdAt:new Date().toISOString()};
-    localStorage.setItem('afterlight.pending.' + this.config.chainId, JSON.stringify(pending));
+    const pending = {id:signed.id, account:owner, method, createdAt:new Date().toISOString(), ...(method === 'buy' && {deadline:args.deadline})};
+    this.storage.setItem('afterlight.pending.' + this.config.chainId, JSON.stringify(pending));
     progress('Submitting the signed transaction…');
     let response;
     try { response = await this.provider.sendTransaction(signed); }
-    catch (error) { throw Error('Submission status is uncertain. Do not repeat this action yet. Check transaction ' + signed.id + '. ' + error.message); }
+    catch (error) {
+      const rejection = executionRejection(error);
+      if (rejection) {
+        this.clearPending(signed.id);
+        throw Error('The transaction was rejected. No purchase or transfer completed. ' + rejection);
+      }
+      throw Error('Submission status is uncertain. Do not repeat this action yet. Check transaction ' + signed.id + '. ' + error.message);
+    }
     if (response.receipt?.reverted) {
-      localStorage.removeItem('afterlight.pending.' + this.config.chainId);
+      this.clearPending(signed.id);
       throw Error('The transaction was rejected: ' + (response.receipt.logs || []).join(' '));
     }
     progress('Waiting for the transaction to appear in a block…');
     await this.confirm(signed.id);
-    localStorage.removeItem('afterlight.pending.' + this.config.chainId);
+    this.clearPending(signed.id);
     return signed.id;
+  }
+  clearPending(id) {
+    const key = 'afterlight.pending.' + this.config.chainId;
+    try { if (JSON.parse(this.storage.getItem(key))?.id === id) this.storage.removeItem(key); } catch {}
+  }
+  async checkPending(pending) {
+    await this.network();
+    const {transactions} = await this.provider.getTransactionsById([pending.id]);
+    if (transactions?.some(tx => tx.containing_blocks?.length)) {
+      await this.confirm(pending.id);
+      this.clearPending(pending.id);
+      return 'Transaction confirmed. Ownership and listings have been refreshed.';
+    }
+    const deadline = purchaseDeadline(pending);
+    if (deadline !== null) {
+      const head = await this.provider.getHeadInfo();
+      // Wait until irreversible chain time has passed the deadline. An absent
+      // index entry or an expiring head block alone cannot establish finality.
+      const irreversible = Number(head.last_irreversible_block);
+      const blocks = Number.isSafeInteger(irreversible) && irreversible > 0
+        ? await this.provider.getBlocks(irreversible,1,head.head_topology?.id,{returnBlock:true,returnReceipt:false}) : [];
+      const timestamp = blocks?.[0]?.block?.header?.timestamp;
+      if (timestamp && BigInt(timestamp) >= deadline) {
+        this.clearPending(pending.id);
+        return 'The earlier purchase quote has expired and cannot execute now. Ownership and listings have been refreshed; you can review a new purchase.';
+      }
+    }
+    throw Error('This transaction is not confirmed yet. Keep it pending and check again shortly. Transaction: ' + pending.id);
   }
   async confirm(id) {
     const inclusion = await this.provider.wait(id, 'byTransactionId', 60000);
@@ -103,8 +149,7 @@ export class ChainClient {
     const receipt = blocks.block_items?.[0]?.receipt?.transaction_receipts?.find(item => item.id === id);
     if (!receipt) throw Error('Transaction confirmation is unavailable. Check transaction ' + id + ' before trying again.');
     if (receipt.reverted) {
-      const key = 'afterlight.pending.' + this.config.chainId;
-      try { if (JSON.parse(localStorage.getItem(key))?.id === id) localStorage.removeItem(key); } catch {}
+      this.clearPending(id);
       throw Error('This transaction was included but reverted. No purchase or transfer completed. Transaction: ' + id);
     }
     return receipt;
