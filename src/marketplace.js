@@ -120,8 +120,9 @@ async function preparePurchase(){
     const offer=await client.quote(selected.id);
     const balances=await client.balances(account);
     if(BigInt(balances.balance)<BigInt(offer.price))throw Error('Your selected wallet does not have enough '+currency()+' for this purchase.');
+    if(offer.primary && account===chainState.config.treasury)throw Error('Use a separate buyer wallet. This wallet receives initial sale payments, and Koinos does not allow a payment to the same account.');
     const args={buyer:account,token_id:tokenId(selected.id),expected_seller:offer.seller,expected_price:offer.price,expected_revision:offer.revision||'0',deadline:String(Date.now()+600000)};
-    review('buy',args,'Collect '+selected.name,[['Price',formatKoin(offer.price)+' '+currency()],['Buyer',account],['Seller',offer.seller],['Payment goes to',offer.primary?chainState.config.treasury:offer.seller]],'The NFT and '+currency()+' move together in one transaction. This quote expires in 10 minutes.');
+    review('buy',args,'Collect '+selected.name,[['Price',formatKoin(offer.price)+' '+currency()],['Buyer',account],['Seller',offer.seller],['Payment goes to',offer.primary?chainState.config.treasury:offer.seller]],'Your wallet will show two operations in one transaction: approve the exact purchase amount, then collect the NFT. The approval is used by this purchase. If the purchase fails, both operations revert. This quote expires in 10 minutes.');
   }catch(error){$('detail-message').textContent=error.message;}finally{busy=false;}
 }
 function review(method,args,title,fields,description){
@@ -156,7 +157,15 @@ $('close-detail').addEventListener('click',()=>$('market-detail').close());
 $('cancel-confirm').addEventListener('click',()=>{if(busy)return;$('confirm-action').close();if(selected)openWork(selected);});
 $('confirm-action').addEventListener('cancel',event=>{if(busy)event.preventDefault();});
 for(const id of ['market-detail','confirm-action'])$(id).addEventListener('click',event=>{if(event.target!==$(id)||busy)return;const rect=$(id).getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)$(id).close();});
-$('check-pending').addEventListener('click',async()=>{const tx=pending();if(!tx||busy)return;busy=true;$('check-pending').disabled=true;try{await client.network();await client.confirm(tx.id);localStorage.removeItem('afterlight.pending.'+config.chainId);pendingNotice();await refresh();}catch(error){$('pending-copy').textContent=error.message;}finally{busy=false;$('check-pending').disabled=false;pendingNotice();}});
+$('check-pending').addEventListener('click',async()=>{
+  const tx=pending();if(!tx||busy)return;busy=true;$('check-pending').disabled=true;
+  let message;
+  try{message=await client.checkPending(tx);await refresh();if(account)await walletChanged();}
+  catch(error){message=error.message;if(!pending())await refresh();}
+  finally{busy=false;$('check-pending').disabled=false;pendingNotice();
+    if(pending())$('pending-copy').textContent=message;else status(config.networkLabel+' · '+message);
+  }
+});
 async function start(){
   try{
     const response=await fetch('network-config.json',{cache:'no-store'});if(!response.ok)throw Error('Missing network configuration.');config=await response.json();client=new ChainClient(config);

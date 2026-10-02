@@ -5,6 +5,9 @@ node_modules/
 !.env.example
 *.log
 contracts/build/protoc-gen-as
+contracts/build/protoc-gen-payment-test
+contracts/build/payment-test.wasm
+tests/fixtures/koin/proto/*.ts
 contracts/build/as-pect.asconfig.json
 contracts/build/*.wat
 contracts/build/*.wasm.map
